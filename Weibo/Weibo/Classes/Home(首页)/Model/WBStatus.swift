@@ -20,6 +20,15 @@ class WBStatus: NSObject {
     /// 微博创建时间
     var created_at: String?
     
+    //  微博距离时间
+    var created_time:String?{
+        get{
+            guard let timeString = created_at else{
+                return nil
+            }
+            return NSDate(fromString: timeString, format: "EEE MMM dd HH:mm:ss zzz yyyy")?.timePassed()
+        }
+    }
     /// 微博ID
     var id: Int = 0
     
@@ -27,7 +36,20 @@ class WBStatus: NSObject {
     var text: String?
 
     /// 微博来源
-    var source: String?
+    var source: String?{
+        didSet{
+            source = source?.linkSource()
+        }
+    }
+    
+    // 转发数
+    var reposts_count:Int = 0
+    // 评论数
+    var comments_count:Int = 0
+    // 点赞数
+    var attitudes_count:Int = 0
+    
+
     
     /// 图片地址数组
     var pic_urls: [[String: AnyObject]]? {
@@ -57,13 +79,14 @@ class WBStatus: NSObject {
     }
     // 执行计算cell行高
     func categoryCellRowHeight(){
-        if self.retweeted_status != nil {
-            self.rowHeight = WBStatusForwardCell.GetRowHeight(self)
-        }else{
-            
-            self.rowHeight = WBStatusNormalCell.GetRowHeight(self)
-        }
-
+      
+            if self.retweeted_status != nil {
+                self.rowHeight = WBStatusForwardCell.GetRowHeight(self)
+            }else{
+                
+                self.rowHeight = WBStatusNormalCell.GetRowHeight(self)
+            }
+        
     }
     /// 缓存cell行高
     var rowHeight: CGFloat?
@@ -74,8 +97,6 @@ class WBStatus: NSObject {
         
         // kvc赋值
         setValuesForKeysWithDictionary(dict)
-        
-        
         
         
     }
@@ -123,7 +144,7 @@ class WBStatus: NSObject {
             }
             return
         }
-        
+
         // 调用父类方法
         super.setValue(value, forKey: key)
     }
@@ -182,9 +203,15 @@ class WBStatus: NSObject {
         // 遍历模型数组
         for status in lists {
             
+            
+            // 进入任务组
+            dispatch_group_enter(group)
+            
             // 获取配图URL
             guard let urls = status.pictureURLs else {
                 // 没有图片继续遍历下一个模型
+                status.categoryCellRowHeight()
+                dispatch_group_leave(group)
                 continue
             }
             
@@ -194,25 +221,25 @@ class WBStatus: NSObject {
                 // 取出图片URL
                 let url = urls[0]
                 
-                // 进入任务组
-                dispatch_group_enter(group)
+                
                 
                 // 使用SDWebImage下载图片
                 SDWebImageManager.sharedManager().downloadImageWithURL(url, options: SDWebImageOptions(rawValue: 0), progress: nil, completed: { (_, _, _, _, _) -> Void in
-                    // 离开任务组
-                    dispatch_group_leave(group)
+                        status.categoryCellRowHeight()
+                        dispatch_group_leave(group)
+ 
                 })
+            }else{
+                status.categoryCellRowHeight()
+                dispatch_group_leave(group)
             }
         }
         
         // 下载完成所有图片才通知调用者微博数据加载完成
         dispatch_group_notify(group, dispatch_get_main_queue()) { () -> Void in
-            // 遍历模型数组
-            for status in lists {
-            status.categoryCellRowHeight()
-            }
-            // 回调返回微博模型数组
+           
             finished(list: lists, error: nil)
+          
         }
     }
     

@@ -29,7 +29,13 @@ class WBStatusForwardCell: WBStatusCell {
             pictureView.snp_updateConstraints { (make) -> Void in
                 make.size.equalTo(pictureSize)
             }
-            
+            bottomView.snp_updateConstraints { (make) -> Void in
+                if pictureSize == CGSize.zero {
+                    make.top.equalTo(pictureView.snp_bottom).offset(0)
+                }else{
+                    make.top.equalTo(pictureView.snp_bottom).offset(statusMargin)
+                }
+            }
             // 更新约束后重新布局
             layoutIfNeeded()
             
@@ -100,7 +106,7 @@ class WBStatusForwardCell: WBStatusCell {
     // MARK: - 懒加载
     /// 转发微博文字
     private lazy var forwardLabel: UILabel = {
-        let label = UILabel(textColor: UIColor.grayColor(), fontSize: 14)
+        let label = FFLabel(textColor: UIColor.grayColor(), fontSize: 14)
         
       
         
@@ -115,8 +121,9 @@ class WBStatusForwardCell: WBStatusCell {
         
         let button = UIButton(type: UIButtonType.Custom)
         
+    
         // 按钮背景
-        button.backgroundColor = UIColor(white: 0.9, alpha: 0.4)
+        button.backgroundColor = UIColor(white: 0.9, alpha: 1.0)
         
         return button
     }()

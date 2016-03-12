@@ -71,27 +71,7 @@ class WBNavigationController: UINavigationController {
         
     }
 
-//    
-//    // 4.动画
-//    // 先利用1s的时间，让label往下移动一段距离
-//    CGFloat duration = 1.0; // 动画的时间
-//    [UIView animateWithDuration:duration animations:^{
-//    //        label.y += label.height;
-//    label.transform = CGAffineTransformMakeTranslation(0, label.height);
-//    } completion:^(BOOL finished) {
-//    // 延迟1s后，再利用1s的时间，让label往上移动一段距离（回到一开始的状态）
-//    CGFloat delay = 1.0; // 延迟1s
-//    // UIViewAnimationOptionCurveLinear:匀速
-//    [UIView animateWithDuration:duration delay:delay options:UIViewAnimationOptionCurveLinear animations:^{
-//    //            label.y -= label.height;
-//    label.transform = CGAffineTransformIdentity;
-//    } completion:^(BOOL finished) {
-//    [label removeFromSuperview];
-//    }];
-//    }];
-//    
-//    // 如果某个动画执行完毕后，又要回到动画执行前的状态，建议使用transform来做动画
-//    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

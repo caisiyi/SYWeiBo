@@ -21,6 +21,15 @@ class WBStatusNormalCell: WBStatusCell {
             pictureView.snp_updateConstraints { (make) -> Void in
                 make.size.equalTo(pictureSize)
             }
+            
+            bottomView.snp_updateConstraints { (make) -> Void in
+                if pictureSize == CGSize.zero {
+                make.top.equalTo(pictureView.snp_bottom).offset(0)
+                }else{
+                make.top.equalTo(pictureView.snp_bottom).offset(statusMargin)
+                }
+            }
+            
             // 更新约束后重新布局
             layoutIfNeeded()
         }
@@ -44,13 +53,14 @@ class WBStatusNormalCell: WBStatusCell {
             make.top.equalTo(topView.snp_bottom).offset(statusMargin)
             make.width.equalTo(kScreenW - statusMargin * 2)
         }
-
+        
         // 微博配图
         pictureView.snp_makeConstraints { (make) -> Void in
             make.left.equalTo(statusMargin)
             make.top.equalTo(contentLabel.snp_bottom).offset(statusMargin)
             make.size.equalTo(CGSizeZero)
         }
+        
         
         // 底部视图
         bottomView.snp_makeConstraints { (make) -> Void in

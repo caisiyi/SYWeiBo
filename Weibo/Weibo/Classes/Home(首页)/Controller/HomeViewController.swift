@@ -30,18 +30,31 @@ class HomeViewController: UIViewController,WBDropdownMenuDelegate {
     var preStatusCount:Int? = nil //上拉加载更多时微博数据的当前数量
     var status:[WBStatus]? {
         didSet{
-            
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+//            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) { () -> Void in
+//                
+//                // 遍历模型数组
+//                for statu in self.status! {
+//                    if statu.rowHeight == nil{
+//                    statu.categoryCellRowHeight()
+//                    }
+//                }
+     
+        
+            dispatch_async(dispatch_get_main_queue()) { () -> Void in
+
+           
                 
-                self.tableView.reloadData()
-                self.tableView.mj_header.endRefreshing()
-                //若为加载更多微博,则让表格滚动到加载的最新一行
-                if self.tableView.mj_footer.state == MJRefreshState.Refreshing {
-                    self.tableView.mj_footer.endRefreshing()
-                    self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: self.preStatusCount ?? 0 , inSection: 0 ), atScrollPosition: UITableViewScrollPosition.Bottom, animated: true)//让table滚置新增cell
-                }
+                    self.tableView.reloadData()
+                    self.tableView.mj_header.endRefreshing()
+                    //若为加载更多微博,则让表格滚动到加载的最新一行
+                    if self.tableView.mj_footer.state == MJRefreshState.Refreshing {
+                        self.tableView.mj_footer.endRefreshing()
+                        self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: self.preStatusCount ?? 0 , inSection: 0 ), atScrollPosition: UITableViewScrollPosition.Bottom, animated: true)//让table滚置新增cell
+                    }
+                    
                 
-            })
+            }
+        
         }
     }
     
@@ -96,6 +109,12 @@ class HomeViewController: UIViewController,WBDropdownMenuDelegate {
         head.beginRefreshing()//视图一出现进入更新加载状态
         tableView.mj_header = head
         
+        
+        let fpsLabel = YYFPSLabel()
+        fpsLabel.sizeToFit()
+        fpsLabel.frame.origin = CGPoint(x: 12, y: 80)
+        view.addSubview(fpsLabel)
+
         
     }
     func loadStatus(){
@@ -229,7 +248,7 @@ extension HomeViewController :UITableViewDataSource,UITableViewDelegate{
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         // 获取当前cell的微博模型
         let status = self.status![indexPath.row]
-        
+     
         return status.rowHeight!
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -24,6 +24,9 @@ class WBStatusCell: UITableViewCell {
             // 将数据模型传递给topView
             topView.status = status
             
+            // 将数据模型传递给bottomView
+            bottomView.status = status
+            
             // 将模型传递给pictureView
             pictureView.status = status
             
@@ -69,11 +72,14 @@ class WBStatusCell: UITableViewCell {
      - returns: 返回计算好的行高
      */
     func rowHeight(status: WBStatus) -> CGFloat {
+     
         // 重新赋值微博模型会重新设置cell里的内容
         self.status = status
-        
+  
         // 返回cell高度，cell高度就是最底部控件的底部y值
         return CGRectGetMaxY(bottomView.frame)
+        
+        
     }
     
     // MARK: - 懒加载cell内的子控件
@@ -82,8 +88,7 @@ class WBStatusCell: UITableViewCell {
     
     /// 微博内容文本标签
     lazy var contentLabel: UILabel = {
-        let label = UILabel(textColor: UIColor.blackColor(), fontSize: 14)
-        
+        let label = FFLabel()
         // 自动换行
         label.numberOfLines = 0
         return label

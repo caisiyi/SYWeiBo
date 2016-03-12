@@ -27,20 +27,20 @@ class WBStatusTopView: UIView {
             
             // 用户名称
             nameLabel.text = status?.user?.name
+            // 用户名称颜色
+            nameLabel.textColor = status?.user?.mbrankImage == nil ? UIColor.darkGrayColor() : UIColor.orangeColor()
             
             // 会员等级
             memberView.image = status?.user?.mbrankImage
             
             // 时间标签
             
-            timeLabel.text = status?.created_at
+            timeLabel.text = status?.created_time
             
             
             // 微博来源
-            //sourceLabel.text = status?.source
-            
-        
-            
+            sourceLabel.text = status?.source
+      
         }
     }
     
@@ -52,6 +52,7 @@ class WBStatusTopView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+    
         // 添加控件
         addSubview(topSeparatorView)
         addSubview(iconView)
@@ -60,6 +61,7 @@ class WBStatusTopView: UIView {
         addSubview(memberView)
         addSubview(timeLabel)
         addSubview(sourceLabel)
+        addSubview(righeMoreBtn)
         
         // 约束控件
         // 顶部分割线
@@ -77,9 +79,9 @@ class WBStatusTopView: UIView {
         
         // 认证图标
         verifiedView.snp_makeConstraints { (make) -> Void in
-            make.size.equalTo(CGSize(width: 17, height: 17))
-            make.bottom.equalTo(iconView.snp_bottom)
-            make.left.equalTo(iconView.snp_right).offset(-8.5)
+            make.size.equalTo(CGSize(width: 16, height: 16))
+            make.bottom.equalTo(iconView.snp_bottom).offset(2)
+            make.right.equalTo(iconView.snp_right).offset(2)
         }
         
         // 名称
@@ -106,7 +108,13 @@ class WBStatusTopView: UIView {
             make.top.equalTo(timeLabel.snp_top)
             make.left.equalTo(timeLabel.snp_right).offset(statusMargin)
         }
-
+        
+        // 右上方小角标
+        righeMoreBtn.snp_makeConstraints { (make) -> Void in
+            make.top.equalTo(nameLabel.snp_top)
+            make.right.equalTo(-10)
+        }
+        
     }
     
    
@@ -115,14 +123,21 @@ class WBStatusTopView: UIView {
     // 用户头像
     private lazy var iconView: UIImageView = {
         let imageView = UIImageView()
-        imageView.layer.cornerRadius = 17.5
-        imageView.layer.masksToBounds = true
+//        imageView.layer.cornerRadius = 17.5
+//        imageView.layer.masksToBounds = true
         return imageView
     }()
     
     // 认证图标
     private lazy var verifiedView: UIImageView = {
-        UIImageView()
+        let image = UIImageView()
+        return image
+    }()
+    
+    // 认证图标
+    private lazy var vipBackgroundView: UIImageView = {
+        let image = UIImageView()
+        return image
     }()
     
     // 用户名称标签
@@ -135,7 +150,7 @@ class WBStatusTopView: UIView {
     }()
     
     // 时间标签
-    private lazy var timeLabel = UILabel(textColor: UIColor.orangeColor(), fontSize: 9)
+    private lazy var timeLabel = UILabel(textColor: UIColor.lightGrayColor(), fontSize: 9)
     
     // 来源标签
     private lazy var sourceLabel = UILabel(textColor: UIColor.lightGrayColor(), fontSize: 9)
@@ -143,9 +158,14 @@ class WBStatusTopView: UIView {
     // 顶部分割线
     private lazy var topSeparatorView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(white: 0.9, alpha: 0.4)
+        //view.backgroundColor = UIColor(white: 0.9, alpha: 0.4)
         return view
     }()
-    
+    // 右侧小角标
+    private lazy var righeMoreBtn:UIButton = {
+        let btn = UIButton(imageName: "timeline_icon_more", highlightedImageName: "timeline_icon_more_highlighted")
+        return btn
+        
+    }()
 }
 

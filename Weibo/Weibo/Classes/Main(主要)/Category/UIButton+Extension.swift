@@ -38,5 +38,23 @@ extension UIButton {
         backgroundColor = UIColor.whiteColor()
         
     }
-    
+    /**
+     快速创建纯图片按钮
+     - parameter imageName: 按钮图片名称
+     - returns: 按钮
+     */
+    convenience init(imageName: String,highlightedImageName: String?)
+    {
+        self.init()
+        
+        // 图片
+        setImage(UIImage(named: imageName), forState: UIControlState.Normal)
+        if let highlightedImageName = highlightedImageName {
+            setImage(UIImage(named: highlightedImageName), forState: UIControlState.Highlighted)
+        }
+        
+        // 设置按钮背景色
+        backgroundColor = UIColor.clearColor()
+        
+    }
 }

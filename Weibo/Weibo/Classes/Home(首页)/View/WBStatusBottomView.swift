@@ -11,6 +11,32 @@ import UIKit
 
 class WBStatusBottomView: UIView {
     
+    /// 微博模型
+    var status: WBStatus? {
+        didSet {
+            // 更新bottomView的数据
+            if let count = status?.reposts_count {
+                if count != 0 {
+                // 转发
+                forwardButton.setTitle(" \(count)", forState: UIControlState.Normal)
+                }
+            }
+            if let count = status?.comments_count {
+                if count != 0 {
+                // 评论
+                commentButton.setTitle(" \(count)", forState: UIControlState.Normal)
+                }
+            }
+            if let count = status?.attitudes_count {
+                if count != 0 {
+                // 点赞
+                likeButton.setTitle(" \(count)", forState: UIControlState.Normal)
+                }
+            }
+       
+        }
+    }
+    
     // MARK: - 构造方法
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -80,13 +106,28 @@ class WBStatusBottomView: UIView {
     
     // MARK: - 懒加载控件
     // 转发
-    private lazy var forwardButton = UIButton(title: "转发", imageName: "timeline_icon_retweet")
+    private lazy var forwardButton:UIButton = {
+        let btn = UIButton(title: " 转发", imageName: "timeline_icon_retweet")
+        btn.setBackgroundImage(UIImage(named: "timeline_retweet_background_highlighted"), forState: UIControlState.Highlighted)
+        btn.setBackgroundImage(UIImage(named: "timeline_retweet_background"), forState: UIControlState.Highlighted)
+        return btn
+    }() 
     
     // 评论
-    private lazy var commentButton = UIButton(title: "评论", imageName: "timeline_icon_comment")
+    private lazy var commentButton:UIButton = {
+        let btn = UIButton(title: " 评论", imageName: "timeline_icon_comment")
+        btn.setBackgroundImage(UIImage(named: "timeline_retweet_background_highlighted"), forState: UIControlState.Highlighted)
+        btn.setBackgroundImage(UIImage(named: "timeline_retweet_background"), forState: UIControlState.Highlighted)
+        return btn
+    }()
     
     // 赞
-    private lazy var likeButton = UIButton(title: "赞", imageName: "timeline_icon_unlike")
+    private lazy var likeButton:UIButton = {
+        let btn = UIButton(title: " 赞", imageName: "timeline_icon_unlike")
+        btn.setBackgroundImage(UIImage(named: "timeline_retweet_background_highlighted"), forState: UIControlState.Highlighted)
+        btn.setBackgroundImage(UIImage(named: "timeline_retweet_background"), forState: UIControlState.Highlighted)
+        return btn
+    }()
     
     // 水平分割线
     private lazy var separatorViewOne = UIImageView(image: UIImage(named: "timeline_card_bottom_line_highlighted"))
