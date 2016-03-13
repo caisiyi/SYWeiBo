@@ -19,7 +19,7 @@ class WBStatusCell: UITableViewCell {
         didSet {
             
             // 微博文本
-            contentLabel.text = status?.text
+            contentLabel.attributedText = status?.attributedText
             
             // 将数据模型传递给topView
             topView.status = status
@@ -87,8 +87,8 @@ class WBStatusCell: UITableViewCell {
     lazy var topView: WBStatusTopView = WBStatusTopView()
     
     /// 微博内容文本标签
-    lazy var contentLabel: UILabel = {
-        let label = FFLabel()
+    lazy var contentLabel: FFLabel = {
+        let label = FFLabel(textColor: UIColor.blackColor(), fontSize: 15)
         // 自动换行
         label.numberOfLines = 0
         return label

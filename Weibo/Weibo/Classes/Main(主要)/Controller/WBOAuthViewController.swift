@@ -41,7 +41,8 @@ class WBOAuthViewController: UIViewController, UIWebViewDelegate {
      取消授权操作，返回主页
      */
     func cancelOAuth() {
-        dismissViewControllerAnimated(true, completion: nil)
+        navigationController?.popViewControllerAnimated(true)
+        //dismissViewControllerAnimated(true, completion: nil)
     }
     
     /**

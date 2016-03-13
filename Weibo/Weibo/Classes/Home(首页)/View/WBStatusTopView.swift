@@ -123,8 +123,10 @@ class WBStatusTopView: UIView {
     // 用户头像
     private lazy var iconView: UIImageView = {
         let imageView = UIImageView()
-//        imageView.layer.cornerRadius = 17.5
-//        imageView.layer.masksToBounds = true
+        imageView.layer.cornerRadius = 17.5
+        imageView.layer.shouldRasterize = true
+        imageView.layer.rasterizationScale = UIScreen.mainScreen().scale
+        imageView.layer.masksToBounds = true
         return imageView
     }()
     

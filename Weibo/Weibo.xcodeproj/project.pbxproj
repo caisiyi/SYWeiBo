@@ -57,6 +57,8 @@
 		9935EDC81C8483D800B8934A /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9935EDC71C8483D800B8934A /* Common.swift */; };
 		996B97681C7DD8D200C843BC /* WBUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B97671C7DD8D200C843BC /* WBUserAccount.swift */; };
 		997EC8FE1C7963DF00923DC2 /* NewfeatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997EC8FD1C7963DF00923DC2 /* NewfeatureViewController.swift */; };
+		997ECF6A1C954FDE00FFBAD7 /* WBEmoticon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997ECF561C954FDE00FFBAD7 /* WBEmoticon.swift */; };
+		997ECF711C95504800FFBAD7 /* WBTextAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997ECF701C95504800FFBAD7 /* WBTextAttachment.swift */; };
 		998B6BF81C780B9200E58897 /* WBSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998B6BF71C780B9200E58897 /* WBSearchBar.swift */; };
 		998B6BFA1C780E5B00E58897 /* WBDropdownMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998B6BF91C780E5B00E58897 /* WBDropdownMenu.swift */; };
 		998B6BFC1C78122E00E58897 /* HomeTitleMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998B6BFB1C78122E00E58897 /* HomeTitleMenuViewController.swift */; };
@@ -185,6 +187,7 @@
 		99C04EBB1C84332900F42E80 /* SnapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C04EAF1C84332900F42E80 /* SnapKit.swift */; };
 		99C04EBC1C84332900F42E80 /* View+SnapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C04EB01C84332900F42E80 /* View+SnapKit.swift */; };
 		99C04EBD1C84332900F42E80 /* ViewController+SnapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C04EB11C84332900F42E80 /* ViewController+SnapKit.swift */; };
+		99DDF0D91C95719E003D8FEC /* UIScrollView+EmptyDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DDF0D81C95719E003D8FEC /* UIScrollView+EmptyDataSet.m */; };
 		99E646F91C77503300812C7E /* WBColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E646F81C77503300812C7E /* WBColor.swift */; };
 		99E646FB1C77544800812C7E /* WBTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E646FA1C77544800812C7E /* WBTabBarViewController.swift */; };
 		99E646FD1C77558700812C7E /* WBNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E646FC1C77558700812C7E /* WBNavigationController.swift */; };
@@ -278,6 +281,8 @@
 		9935EDC71C8483D800B8934A /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		996B97671C7DD8D200C843BC /* WBUserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBUserAccount.swift; sourceTree = "<group>"; };
 		997EC8FD1C7963DF00923DC2 /* NewfeatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewfeatureViewController.swift; sourceTree = "<group>"; };
+		997ECF561C954FDE00FFBAD7 /* WBEmoticon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBEmoticon.swift; sourceTree = "<group>"; };
+		997ECF701C95504800FFBAD7 /* WBTextAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WBTextAttachment.swift; path = Emotion/WBTextAttachment.swift; sourceTree = "<group>"; };
 		998B6BF71C780B9200E58897 /* WBSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBSearchBar.swift; sourceTree = "<group>"; };
 		998B6BF91C780E5B00E58897 /* WBDropdownMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBDropdownMenu.swift; sourceTree = "<group>"; };
 		998B6BFB1C78122E00E58897 /* HomeTitleMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTitleMenuViewController.swift; sourceTree = "<group>"; };
@@ -501,6 +506,8 @@
 		99C04EAF1C84332900F42E80 /* SnapKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapKit.swift; sourceTree = "<group>"; };
 		99C04EB01C84332900F42E80 /* View+SnapKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+SnapKit.swift"; sourceTree = "<group>"; };
 		99C04EB11C84332900F42E80 /* ViewController+SnapKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+SnapKit.swift"; sourceTree = "<group>"; };
+		99DDF0D71C95719E003D8FEC /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
+		99DDF0D81C95719E003D8FEC /* UIScrollView+EmptyDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+EmptyDataSet.m"; sourceTree = "<group>"; };
 		99E646F81C77503300812C7E /* WBColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBColor.swift; sourceTree = "<group>"; };
 		99E646FA1C77544800812C7E /* WBTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBTabBarViewController.swift; sourceTree = "<group>"; };
 		99E646FC1C77558700812C7E /* WBNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNavigationController.swift; sourceTree = "<group>"; };
@@ -689,6 +696,15 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		997ECF461C954FDE00FFBAD7 /* Emoticon */ = {
+			isa = PBXGroup;
+			children = (
+				997ECF561C954FDE00FFBAD7 /* WBEmoticon.swift */,
+				997ECF701C95504800FFBAD7 /* WBTextAttachment.swift */,
+			);
+			path = Emoticon;
+			sourceTree = "<group>";
+		};
 		998E7D001C7746B800C805A5 = {
 			isa = PBXGroup;
 			children = (
@@ -840,6 +856,8 @@
 		998E7D2A1C7748F000C805A5 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				99DDF0D61C95719E003D8FEC /* DZNEmptyDataSet */,
+				997ECF461C954FDE00FFBAD7 /* Emoticon */,
 				9934D0A91C94593B003AF75F /* GCDKit */,
 				99B504AB1C941DE600D13FCC /* YYKit */,
 				99C04EA41C84332900F42E80 /* Snapkit */,
@@ -1311,6 +1329,15 @@
 			path = Snapkit;
 			sourceTree = "<group>";
 		};
+		99DDF0D61C95719E003D8FEC /* DZNEmptyDataSet */ = {
+			isa = PBXGroup;
+			children = (
+				99DDF0D71C95719E003D8FEC /* UIScrollView+EmptyDataSet.h */,
+				99DDF0D81C95719E003D8FEC /* UIScrollView+EmptyDataSet.m */,
+			);
+			path = DZNEmptyDataSet;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1472,6 +1499,7 @@
 				99B505B51C9422CB00D13FCC /* WBStatusHelper.swift in Sources */,
 				991EFB961C7F3525003FA593 /* SDWebImageDownloader.m in Sources */,
 				99B504AA1C93D4BE00D13FCC /* StringExtension.swift in Sources */,
+				997ECF711C95504800FFBAD7 /* WBTextAttachment.swift in Sources */,
 				99C04EBD1C84332900F42E80 /* ViewController+SnapKit.swift in Sources */,
 				991EFBDF1C7F445A003FA593 /* UIScrollView+MJRefresh.m in Sources */,
 				991EFBD41C7F445A003FA593 /* MJRefreshAutoNormalFooter.m in Sources */,
@@ -1490,6 +1518,7 @@
 				991EFB951C7F3525003FA593 /* SDWebImageDecoder.m in Sources */,
 				99B5057D1C941DE600D13FCC /* YYMemoryCache.m in Sources */,
 				99B505661C941DE600D13FCC /* NSObject+YYAddForKVO.m in Sources */,
+				997ECF6A1C954FDE00FFBAD7 /* WBEmoticon.swift in Sources */,
 				99E646FD1C77558700812C7E /* WBNavigationController.swift in Sources */,
 				991EFBE01C7F445A003FA593 /* UIView+MJExtension.m in Sources */,
 				998E7D3C1C774E2800C805A5 /* MessageViewController.swift in Sources */,
@@ -1523,6 +1552,7 @@
 				9935EDC41C8483B500B8934A /* UILable+Extension.swift in Sources */,
 				991EFB911C7F3525003FA593 /* MKAnnotationView+WebCache.m in Sources */,
 				998B6BF81C780B9200E58897 /* WBSearchBar.swift in Sources */,
+				99DDF0D91C95719E003D8FEC /* UIScrollView+EmptyDataSet.m in Sources */,
 				99B505781C941DE600D13FCC /* UITextField+YYAdd.m in Sources */,
 				9934D0B11C94593B003AF75F /* GCDQueue.swift in Sources */,
 				99B5058E1C941DE600D13FCC /* YYTextDebugOption.m in Sources */,

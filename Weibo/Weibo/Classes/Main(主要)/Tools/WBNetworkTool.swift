@@ -194,6 +194,19 @@ extension WBNetworkTool {
         
     }
     
+    //将一个或多个短链接还原成原始的长链接
+    func expandUrl(url:String,finished: NetworkFinishedCallBack){
+        
+        // guard守卫，如果没有值才执行else里，否则赋值给parameters后继续执行后面代码
+        guard var parameters = tokenDict(finished) else {
+            return
+        }
+        parameters["url_short"] = url
+        // 请求URL字符串
+        let urlString = "2/short_url/expand.json"
+        
+        request(WBNetworkMethod.GET, URLString: urlString, parameters: parameters, finished: finished)
+    }
 }
 
 // MARK: - 封装GET、POST请求、判断access_token
@@ -217,7 +230,7 @@ extension WBNetworkTool {
             self.afnManager.GET(URLString, parameters: parameters, progress: { (progress) -> Void in
                     // 进度
                 }, success: { (_, result) -> Void in
-                    
+               
                     // 成功回调
                     finished(result: result as? [String : AnyObject], error: nil)
                 }, failure: { (_, error) -> Void in

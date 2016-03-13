@@ -30,15 +30,7 @@ class HomeViewController: UIViewController,WBDropdownMenuDelegate {
     var preStatusCount:Int? = nil //上拉加载更多时微博数据的当前数量
     var status:[WBStatus]? {
         didSet{
-//            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) { () -> Void in
-//                
-//                // 遍历模型数组
-//                for statu in self.status! {
-//                    if statu.rowHeight == nil{
-//                    statu.categoryCellRowHeight()
-//                    }
-//                }
-     
+
         
             dispatch_async(dispatch_get_main_queue()) { () -> Void in
 
@@ -85,6 +77,7 @@ class HomeViewController: UIViewController,WBDropdownMenuDelegate {
         
         tableView.delegate = self
         tableView.dataSource = self
+
         view.addSubview(tableView)
        
        
@@ -106,7 +99,12 @@ class HomeViewController: UIViewController,WBDropdownMenuDelegate {
         head.setTitle("释放更新", forState: MJRefreshState.Pulling)
         head.setTitle("加载中...", forState: MJRefreshState.Refreshing)
         head.lastUpdatedTimeLabel?.hidden = true
+        if !WBUserAccount.shareUserAccount.isAuth {
+            tableView.emptyDataSetDelegate = self
+            tableView.emptyDataSetSource = self
+        }else{
         head.beginRefreshing()//视图一出现进入更新加载状态
+        }
         tableView.mj_header = head
         
         
@@ -267,4 +265,18 @@ extension HomeViewController :UITableViewDataSource,UITableViewDelegate{
         
         return cell
     }
+}
+extension HomeViewController:DZNEmptyDataSetSource,DZNEmptyDataSetDelegate{
+    func imageForEmptyDataSet(scrollView: UIScrollView!) -> UIImage! {
+        return UIImage(named: "avatar_default_big")!
+    }
+    func buttonTitleForEmptyDataSet(scrollView: UIScrollView!, forState state: UIControlState) -> NSAttributedString! {
+        return
+            NSAttributedString(string: "登录", attributes: [NSFontAttributeName:UIFont.systemFontOfSize(17)])
+    }
+
+    func emptyDataSetDidTapButton(scrollView: UIScrollView!) {
+        navigationController?.pushViewController(WBOAuthViewController(), animated: true)
+    }
+  
 }

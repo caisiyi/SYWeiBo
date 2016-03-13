@@ -10,7 +10,6 @@ import Foundation
 
 extension String
 {
-    
     /// 扩展String,使用正则表达式获取来源
     func linkSource() -> String
     {

@@ -55,7 +55,7 @@ public class FFLabel: UILabel {
         addLinkAttribute(attrStringM)
         
         textStorage.setAttributedString(attrStringM)
-        
+   
         setNeedsDisplay()
     }
     
@@ -77,6 +77,8 @@ public class FFLabel: UILabel {
         for r in linkRanges {
             attrStringM.setAttributes(attributes, range: r)
         }
+        
+      
     }
     
     /// use regex check all link ranges
@@ -86,13 +88,31 @@ public class FFLabel: UILabel {
         let regexRange = NSRange(location: 0, length: attrString.string.characters.count)
         
         for pattern in patterns {
+            
             let regex = try! NSRegularExpression(pattern: pattern, options: NSRegularExpressionOptions.DotMatchesLineSeparators)
             let results = regex.matchesInString(attrString.string, options: NSMatchingOptions(rawValue: 0), range: regexRange)
             
+//            if pattern == "[a-zA-Z]*://[a-zA-Z0-9/\\.]*" {
+//        
+//                if results.count >= 0 {
+//                    for r in results {
+//                        let httpString = (attrString.string as NSString).substringWithRange(r.rangeAtIndex(0))
+//                        if !httpString.hasSuffix("weibo") {
+//                            WBStatusHelper.saveHttpLinkStyle(httpString)
+//                            linkRanges.append(r.rangeAtIndex(0))
+//                        }else{
+//                            linkRanges.append(r.rangeAtIndex(0))
+//                        }
+//                    }
+//                }
+//            }else{
+//            ｝
             for r in results {
                 linkRanges.append(r.rangeAtIndex(0))
             }
+            
         }
+        
     }
     
     /// add line break mode
@@ -247,6 +267,7 @@ public class FFLabel: UILabel {
     
     // MARK: lazy properties
     private lazy var linkRanges = [NSRange]()
+    private lazy var deletelinkRanges = [NSRange]()
     private var selectedRange: NSRange?
     private lazy var textStorage = NSTextStorage()
     private lazy var layoutManager = NSLayoutManager()

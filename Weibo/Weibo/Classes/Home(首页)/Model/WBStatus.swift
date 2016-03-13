@@ -12,7 +12,16 @@ class WBStatus: NSObject {
     
     // MARK: - 属性
     // 转发微博
-    var retweeted_status: WBStatus?
+    var retweeted_status: WBStatus?{
+        didSet{
+            let name = retweeted_status?.user?.name ?? "名称为空"
+            let text = retweeted_status?.text ?? "内容为空"
+            
+            let forwardString = "@" + name + ":" + text
+            
+            forwardAttributedText = WBEmoticon.stringToEmoticonString(forwardString, font: UIFont.systemFontOfSize(14))
+        }
+    }
     
     /// 用户模型
     var user: WBUser?
@@ -33,8 +42,18 @@ class WBStatus: NSObject {
     var id: Int = 0
     
     /// 微博信息内容
-    var text: String?
-
+    var text: String?{
+        didSet{
+            attributedText = WBEmoticon.stringToEmoticonString(text!, font: UIFont.systemFontOfSize(15))
+        }
+    }
+    
+    //  微博文字转带有表情的
+    var attributedText:NSAttributedString?
+    
+    //  转发微博文字转带有表情的
+    var forwardAttributedText:NSAttributedString?
+    
     /// 微博来源
     var source: String?{
         didSet{

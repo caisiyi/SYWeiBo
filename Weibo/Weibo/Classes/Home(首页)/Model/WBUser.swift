@@ -34,7 +34,7 @@ class WBUser: NSObject {
     /// 是否是微博认证用户， true 是
     var verified: Bool = false
     
-    /// -1:没有认证  0:认证用户  2,3,5:企业认证  220:达人
+    /// -1:没有认证  0:认证用户  1,2,3,4,5:企业认证  220:达人
     var verified_type: Int = -1
     
     // 计算型属性，返回认证类型图标
@@ -43,7 +43,7 @@ class WBUser: NSObject {
             switch verified_type {
             case 0:
                 return UIImage(named: "avatar_vip")
-            case 2,3,5:
+            case 1,2,3,4,5:
                 return UIImage(named: "avatar_enterprise_vip")
             case 220:
                 return UIImage(named: "avatar_grassroot")

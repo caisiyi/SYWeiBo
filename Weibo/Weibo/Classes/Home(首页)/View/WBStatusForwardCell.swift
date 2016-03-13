@@ -20,10 +20,8 @@ class WBStatusForwardCell: WBStatusCell {
     override var status: WBStatus? {
         didSet {
             
-            let name = status?.retweeted_status?.user?.name ?? "名称为空"
-            let text = status?.retweeted_status?.text ?? "内容为空"
-            
-            forwardLabel.text = name + text
+       
+            forwardLabel.attributedText = status?.forwardAttributedText
             
             // 更新配图区约束
             pictureView.snp_updateConstraints { (make) -> Void in
@@ -105,7 +103,7 @@ class WBStatusForwardCell: WBStatusCell {
     
     // MARK: - 懒加载
     /// 转发微博文字
-    private lazy var forwardLabel: UILabel = {
+    private lazy var forwardLabel: FFLabel = {
         let label = FFLabel(textColor: UIColor.grayColor(), fontSize: 14)
         
       
