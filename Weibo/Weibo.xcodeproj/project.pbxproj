@@ -171,7 +171,6 @@
 		99C04E9D1C84321C00F42E80 /* WBStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C04E961C84321C00F42E80 /* WBStatusCell.swift */; };
 		99C04E9E1C84321C00F42E80 /* WBStatusForwardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C04E971C84321C00F42E80 /* WBStatusForwardCell.swift */; };
 		99C04E9F1C84321C00F42E80 /* WBStatusNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C04E981C84321C00F42E80 /* WBStatusNormalCell.swift */; };
-		99C04EA01C84321C00F42E80 /* WBStatusTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C04E991C84321C00F42E80 /* WBStatusTopView.swift */; };
 		99C04EA11C84321C00F42E80 /* WBStatusPictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C04E9A1C84321C00F42E80 /* WBStatusPictureView.swift */; };
 		99C04EA21C84321C00F42E80 /* WBStatusPictureViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C04E9B1C84321C00F42E80 /* WBStatusPictureViewCell.swift */; };
 		99C04EA31C84321C00F42E80 /* WBStatusBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C04E9C1C84321C00F42E80 /* WBStatusBottomView.swift */; };
@@ -187,6 +186,15 @@
 		99C04EBB1C84332900F42E80 /* SnapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C04EAF1C84332900F42E80 /* SnapKit.swift */; };
 		99C04EBC1C84332900F42E80 /* View+SnapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C04EB01C84332900F42E80 /* View+SnapKit.swift */; };
 		99C04EBD1C84332900F42E80 /* ViewController+SnapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C04EB11C84332900F42E80 /* ViewController+SnapKit.swift */; };
+		99CDEEAC1C964E4C000E5E07 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CDEEAB1C964E4C000E5E07 /* UIImageExtension.swift */; };
+		99CDEFBA1C969594000E5E07 /* WBStatusLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CDEFB91C969594000E5E07 /* WBStatusLayout.swift */; };
+		99CDEFBC1C969E8D000E5E07 /* WBStatusTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CDEFBB1C969E8D000E5E07 /* WBStatusTopView.swift */; };
+		99CDEFD21C96F5F8000E5E07 /* SYPhotoBrowserImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CDEFCC1C96F5F8000E5E07 /* SYPhotoBrowserImageView.swift */; };
+		99CDEFD31C96F5F8000E5E07 /* SYPhotoBrowserDismissAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CDEFCD1C96F5F8000E5E07 /* SYPhotoBrowserDismissAnimation.swift */; };
+		99CDEFD41C96F5F8000E5E07 /* SYPhotoBrowserModalAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CDEFCE1C96F5F8000E5E07 /* SYPhotoBrowserModalAnimation.swift */; };
+		99CDEFD51C96F5F8000E5E07 /* SYPhotoBrowserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CDEFCF1C96F5F8000E5E07 /* SYPhotoBrowserModel.swift */; };
+		99CDEFD61C96F5F8000E5E07 /* SYPhotoBrowserViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CDEFD01C96F5F8000E5E07 /* SYPhotoBrowserViewCell.swift */; };
+		99CDEFD71C96F5F8000E5E07 /* SYPhotoBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CDEFD11C96F5F8000E5E07 /* SYPhotoBrowserViewController.swift */; };
 		99DDF0D91C95719E003D8FEC /* UIScrollView+EmptyDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DDF0D81C95719E003D8FEC /* UIScrollView+EmptyDataSet.m */; };
 		99E646F91C77503300812C7E /* WBColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E646F81C77503300812C7E /* WBColor.swift */; };
 		99E646FB1C77544800812C7E /* WBTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E646FA1C77544800812C7E /* WBTabBarViewController.swift */; };
@@ -489,7 +497,6 @@
 		99C04E961C84321C00F42E80 /* WBStatusCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusCell.swift; sourceTree = "<group>"; };
 		99C04E971C84321C00F42E80 /* WBStatusForwardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusForwardCell.swift; sourceTree = "<group>"; };
 		99C04E981C84321C00F42E80 /* WBStatusNormalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusNormalCell.swift; sourceTree = "<group>"; };
-		99C04E991C84321C00F42E80 /* WBStatusTopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusTopView.swift; sourceTree = "<group>"; };
 		99C04E9A1C84321C00F42E80 /* WBStatusPictureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusPictureView.swift; sourceTree = "<group>"; };
 		99C04E9B1C84321C00F42E80 /* WBStatusPictureViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusPictureViewCell.swift; sourceTree = "<group>"; };
 		99C04E9C1C84321C00F42E80 /* WBStatusBottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusBottomView.swift; sourceTree = "<group>"; };
@@ -506,6 +513,15 @@
 		99C04EAF1C84332900F42E80 /* SnapKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapKit.swift; sourceTree = "<group>"; };
 		99C04EB01C84332900F42E80 /* View+SnapKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+SnapKit.swift"; sourceTree = "<group>"; };
 		99C04EB11C84332900F42E80 /* ViewController+SnapKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+SnapKit.swift"; sourceTree = "<group>"; };
+		99CDEEAB1C964E4C000E5E07 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		99CDEFB91C969594000E5E07 /* WBStatusLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusLayout.swift; sourceTree = "<group>"; };
+		99CDEFBB1C969E8D000E5E07 /* WBStatusTopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusTopView.swift; sourceTree = "<group>"; };
+		99CDEFCC1C96F5F8000E5E07 /* SYPhotoBrowserImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYPhotoBrowserImageView.swift; sourceTree = "<group>"; };
+		99CDEFCD1C96F5F8000E5E07 /* SYPhotoBrowserDismissAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYPhotoBrowserDismissAnimation.swift; sourceTree = "<group>"; };
+		99CDEFCE1C96F5F8000E5E07 /* SYPhotoBrowserModalAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYPhotoBrowserModalAnimation.swift; sourceTree = "<group>"; };
+		99CDEFCF1C96F5F8000E5E07 /* SYPhotoBrowserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYPhotoBrowserModel.swift; sourceTree = "<group>"; };
+		99CDEFD01C96F5F8000E5E07 /* SYPhotoBrowserViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYPhotoBrowserViewCell.swift; sourceTree = "<group>"; };
+		99CDEFD11C96F5F8000E5E07 /* SYPhotoBrowserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYPhotoBrowserViewController.swift; sourceTree = "<group>"; };
 		99DDF0D71C95719E003D8FEC /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
 		99DDF0D81C95719E003D8FEC /* UIScrollView+EmptyDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+EmptyDataSet.m"; sourceTree = "<group>"; };
 		99E646F81C77503300812C7E /* WBColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBColor.swift; sourceTree = "<group>"; };
@@ -799,6 +815,7 @@
 			children = (
 				991EFB6B1C7F3249003FA593 /* WBUser.swift */,
 				991EFB6D1C7F3262003FA593 /* WBStatus.swift */,
+				99CDEFB91C969594000E5E07 /* WBStatusLayout.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -839,6 +856,7 @@
 				99AEDF941C7DE84300031F2C /* UIWindow+Extension.swift */,
 				9935EDC31C8483B500B8934A /* UILable+Extension.swift */,
 				9935EDC51C8483C100B8934A /* UIButton+Extension.swift */,
+				99CDEEAB1C964E4C000E5E07 /* UIImageExtension.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -856,6 +874,7 @@
 		998E7D2A1C7748F000C805A5 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				99CDEFCB1C96F5F8000E5E07 /* PhotoBrowser */,
 				99DDF0D61C95719E003D8FEC /* DZNEmptyDataSet */,
 				997ECF461C954FDE00FFBAD7 /* Emoticon */,
 				9934D0A91C94593B003AF75F /* GCDKit */,
@@ -1301,7 +1320,7 @@
 				99C04E961C84321C00F42E80 /* WBStatusCell.swift */,
 				99C04E971C84321C00F42E80 /* WBStatusForwardCell.swift */,
 				99C04E981C84321C00F42E80 /* WBStatusNormalCell.swift */,
-				99C04E991C84321C00F42E80 /* WBStatusTopView.swift */,
+				99CDEFBB1C969E8D000E5E07 /* WBStatusTopView.swift */,
 				99C04E9A1C84321C00F42E80 /* WBStatusPictureView.swift */,
 				99C04E9B1C84321C00F42E80 /* WBStatusPictureViewCell.swift */,
 				99C04E9C1C84321C00F42E80 /* WBStatusBottomView.swift */,
@@ -1327,6 +1346,19 @@
 				99C04EB11C84332900F42E80 /* ViewController+SnapKit.swift */,
 			);
 			path = Snapkit;
+			sourceTree = "<group>";
+		};
+		99CDEFCB1C96F5F8000E5E07 /* PhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				99CDEFCC1C96F5F8000E5E07 /* SYPhotoBrowserImageView.swift */,
+				99CDEFCD1C96F5F8000E5E07 /* SYPhotoBrowserDismissAnimation.swift */,
+				99CDEFCE1C96F5F8000E5E07 /* SYPhotoBrowserModalAnimation.swift */,
+				99CDEFCF1C96F5F8000E5E07 /* SYPhotoBrowserModel.swift */,
+				99CDEFD01C96F5F8000E5E07 /* SYPhotoBrowserViewCell.swift */,
+				99CDEFD11C96F5F8000E5E07 /* SYPhotoBrowserViewController.swift */,
+			);
+			path = PhotoBrowser;
 			sourceTree = "<group>";
 		};
 		99DDF0D61C95719E003D8FEC /* DZNEmptyDataSet */ = {
@@ -1424,11 +1456,11 @@
 				99B5057A1C941DE600D13FCC /* YYCache.m in Sources */,
 				99C04EA11C84321C00F42E80 /* WBStatusPictureView.swift in Sources */,
 				998B6BFC1C78122E00E58897 /* HomeTitleMenuViewController.swift in Sources */,
-				99C04EA01C84321C00F42E80 /* WBStatusTopView.swift in Sources */,
 				991EFBD21C7F445A003FA593 /* MJRefreshHeader.m in Sources */,
 				99B505981C941DE600D13FCC /* UIPasteboard+YYText.m in Sources */,
 				996B97681C7DD8D200C843BC /* WBUserAccount.swift in Sources */,
 				991EFBD61C7F445A003FA593 /* MJRefreshBackGifFooter.m in Sources */,
+				99CDEFD71C96F5F8000E5E07 /* SYPhotoBrowserViewController.swift in Sources */,
 				991EFBA01C7F3525003FA593 /* UIView+WebCacheOperation.m in Sources */,
 				991EFBD01C7F445A003FA593 /* MJRefreshComponent.m in Sources */,
 				99B5056B1C941DE600D13FCC /* YYCGUtilities.m in Sources */,
@@ -1437,8 +1469,10 @@
 				99B505671C941DE600D13FCC /* NSString+YYAdd.m in Sources */,
 				99B5058A1C941DE600D13FCC /* YYWebImageOperation.m in Sources */,
 				991EFBD51C7F445A003FA593 /* MJRefreshAutoStateFooter.m in Sources */,
+				99CDEFD21C96F5F8000E5E07 /* SYPhotoBrowserImageView.swift in Sources */,
 				99AEDF971C7DED1D00031F2C /* WBNetworkError.swift in Sources */,
 				99B505971C941DE600D13FCC /* NSParagraphStyle+YYText.m in Sources */,
+				99CDEFD31C96F5F8000E5E07 /* SYPhotoBrowserDismissAnimation.swift in Sources */,
 				99C04EB81C84332900F42E80 /* Debugging.swift in Sources */,
 				998B6BFA1C780E5B00E58897 /* WBDropdownMenu.swift in Sources */,
 				99B5059C1C941DE600D13FCC /* YYTextRubyAnnotation.m in Sources */,
@@ -1446,6 +1480,7 @@
 				99C04EBB1C84332900F42E80 /* SnapKit.swift in Sources */,
 				9935EDC61C8483C100B8934A /* UIButton+Extension.swift in Sources */,
 				99B505601C941DE600D13FCC /* NSDictionary+YYAdd.m in Sources */,
+				99CDEFD41C96F5F8000E5E07 /* SYPhotoBrowserModalAnimation.swift in Sources */,
 				99B505791C941DE600D13FCC /* UIView+YYAdd.m in Sources */,
 				9990F5BA1C799004002D8400 /* AFURLSessionManager.m in Sources */,
 				99B505711C941DE600D13FCC /* UIDevice+YYAdd.m in Sources */,
@@ -1478,6 +1513,7 @@
 				998E7D381C774E0F00C805A5 /* DiscoverViewController.swift in Sources */,
 				99B505A91C941DE600D13FCC /* YYThreadSafeDictionary.m in Sources */,
 				99B505701C941DE600D13FCC /* UIControl+YYAdd.m in Sources */,
+				99CDEFBA1C969594000E5E07 /* WBStatusLayout.swift in Sources */,
 				991EFB9E1C7F3525003FA593 /* UIImageView+HighlightedWebCache.m in Sources */,
 				99C04EA31C84321C00F42E80 /* WBStatusBottomView.swift in Sources */,
 				99B505911C941DE600D13FCC /* YYTextKeyboardManager.m in Sources */,
@@ -1514,6 +1550,7 @@
 				99C04EB61C84332900F42E80 /* ConstraintMaker.swift in Sources */,
 				9990F5B51C799004002D8400 /* AFHTTPSessionManager.m in Sources */,
 				99B505721C941DE600D13FCC /* UIFont+YYAdd.m in Sources */,
+				99CDEFD61C96F5F8000E5E07 /* SYPhotoBrowserViewCell.swift in Sources */,
 				998E6D8D1C7ED85D00542067 /* WBTitleButton.swift in Sources */,
 				991EFB951C7F3525003FA593 /* SDWebImageDecoder.m in Sources */,
 				99B5057D1C941DE600D13FCC /* YYMemoryCache.m in Sources */,
@@ -1536,6 +1573,7 @@
 				99B5056F1C941DE600D13FCC /* UIColor+YYAdd.m in Sources */,
 				99B505931C941DE600D13FCC /* YYTextLine.m in Sources */,
 				991EFB6E1C7F3262003FA593 /* WBStatus.swift in Sources */,
+				99CDEEAC1C964E4C000E5E07 /* UIImageExtension.swift in Sources */,
 				99B505681C941DE600D13FCC /* NSThread+YYAdd.m in Sources */,
 				99B5059D1C941DE600D13FCC /* YYTextRunDelegate.m in Sources */,
 				99C04EA21C84321C00F42E80 /* WBStatusPictureViewCell.swift in Sources */,
@@ -1554,6 +1592,7 @@
 				998B6BF81C780B9200E58897 /* WBSearchBar.swift in Sources */,
 				99DDF0D91C95719E003D8FEC /* UIScrollView+EmptyDataSet.m in Sources */,
 				99B505781C941DE600D13FCC /* UITextField+YYAdd.m in Sources */,
+				99CDEFBC1C969E8D000E5E07 /* WBStatusTopView.swift in Sources */,
 				9934D0B11C94593B003AF75F /* GCDQueue.swift in Sources */,
 				99B5058E1C941DE600D13FCC /* YYTextDebugOption.m in Sources */,
 				9990F5B81C799004002D8400 /* AFURLRequestSerialization.m in Sources */,
@@ -1570,6 +1609,7 @@
 				991EFB9A1C7F3525003FA593 /* UIButton+WebCache.m in Sources */,
 				99B505AC1C941DE600D13FCC /* YYWeakProxy.m in Sources */,
 				9990F5B91C799004002D8400 /* AFURLResponseSerialization.m in Sources */,
+				99CDEFD51C96F5F8000E5E07 /* SYPhotoBrowserModel.swift in Sources */,
 				99B505A31C941DE600D13FCC /* YYFileHash.m in Sources */,
 				99E646FB1C77544800812C7E /* WBTabBarViewController.swift in Sources */,
 				9935EDC81C8483D800B8934A /* Common.swift in Sources */,

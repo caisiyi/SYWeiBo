@@ -172,7 +172,35 @@ extension WBStatusPictureView: UICollectionViewDataSource, UICollectionViewDeleg
         return cell
     }
 
-    
+    // 选中某个cell时调用
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
+        let count = status?.largePictureURLs?.count ?? 0
+        
+        // 创建模型数组
+        var models = [SYPhotoBrowserModel]()
+        
+        for index in 0..<count {
+            
+            // 创建模型
+            let model = SYPhotoBrowserModel()
+            
+            model.imageUrl = status?.largePictureURLs![index]
+            
+            let cell = collectionView.cellForItemAtIndexPath(NSIndexPath(forItem: index, inSection: 0)) as! WBStatusPictureViewCell
+            model.imageView = cell.iconView
+            
+            // 添加到模型数组
+            models.append(model)
+        }
+        
+        // 选中图片的索引 和 模型数组
+        let userInfo = [UICollectionViewCellDidSelectedPhotoIndexKey : indexPath.item, UICollectionViewCellDidSelectedPhotoUrlsKey : models] as [String : AnyObject]
+        
+        // 发送通知
+        NSNotificationCenter.defaultCenter().postNotificationName(UICollectionViewCellDidSelectedPhotoNotification, object: nil, userInfo: userInfo)
+        
+    }
 }
 
 

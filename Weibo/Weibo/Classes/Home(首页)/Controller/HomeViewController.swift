@@ -67,6 +67,38 @@ class HomeViewController: UIViewController,WBDropdownMenuDelegate {
         return tableView
         
     }()
+    deinit {
+        // 移除所有通知
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
+    /**
+     已经选中了某个图片时的通知方法
+     */
+    func didSelectedPhotoNotification(notifocation: NSNotification) {
+        
+        guard let index = notifocation.userInfo?[UICollectionViewCellDidSelectedPhotoIndexKey] as? Int else {
+            return
+        }
+        
+        guard let models = notifocation.userInfo?[UICollectionViewCellDidSelectedPhotoUrlsKey] as? [SYPhotoBrowserModel] else {
+            return
+        }
+        // 要modal的控制器
+        let controller = SYPhotoBrowserViewController(index: index, models: models)
+        
+        
+        // 设置modal转场代理
+        controller.transitioningDelegate = controller
+        
+        // 设置modal控制器的modal样式
+        controller.modalPresentationStyle = UIModalPresentationStyle.Custom
+        
+        // 图片浏览器
+        presentViewController(controller, animated: true, completion: nil)
+        
+    }
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -113,6 +145,9 @@ class HomeViewController: UIViewController,WBDropdownMenuDelegate {
         fpsLabel.frame.origin = CGPoint(x: 12, y: 80)
         view.addSubview(fpsLabel)
 
+        
+        // 注册查看大图的通知
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "didSelectedPhotoNotification:", name: UICollectionViewCellDidSelectedPhotoNotification, object: nil)
         
     }
     func loadStatus(){
