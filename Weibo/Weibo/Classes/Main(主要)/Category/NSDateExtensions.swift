@@ -6,7 +6,12 @@
 //  Copyright © 2016年 caisiyi. All rights reserved.
 //
 import UIKit
-
+struct Formatter {
+    
+    static var fmt : NSDateFormatter?
+    static var token: dispatch_once_t = 0
+    
+}
 extension NSDate {
     
     public convenience init?(fromString string: String, format: String) {
@@ -18,7 +23,15 @@ extension NSDate {
             return nil
         }
     }
-    
+    class var defaultFormatter:NSDateFormatter {
+        dispatch_once(&Formatter.token) {
+            let formatter = NSDateFormatter()
+            formatter.locale = NSLocale(localeIdentifier: "en")
+            Formatter.fmt = formatter
+        }
+        return Formatter.fmt!
+        
+    }
     ///  返回日期描述字符串
     ///
     ///     格式如下
@@ -73,13 +86,12 @@ extension NSDate {
             }
         }
         
+        
+        
         // 创建NSDateFormatter
-        let fmt = NSDateFormatter()
+        NSDate.defaultFormatter.dateFormat = fmtString
         
-        fmt.locale = NSLocale(localeIdentifier: "en")
-        fmt.dateFormat = fmtString
-        
-        return fmt.stringFromDate(self)
+        return NSDate.defaultFormatter.stringFromDate(self)
     }
 }
 
