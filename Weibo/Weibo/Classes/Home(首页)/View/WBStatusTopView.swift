@@ -19,7 +19,19 @@ class WBStatusTopView: UIView {
             // 更新topView的数据
             // 头像
             if let url = status?.user?.profileImageUrl {
-                iconView.sd_setImageWithURL(url, placeholderImage: UIImage(named: "avatar"))
+                
+                if !SDWebImageManager.sharedManager().diskImageExistsForURL(url){
+                    SDWebImageManager.sharedManager().downloadImageWithURL(url, options: SDWebImageOptions(), progress: { (_, _) -> Void in
+                        }, completed: { (image, _, _, _, _) -> Void in
+                            let image = image!.roundedCornerImageWithCornerRadius(17.5)
+                            SDWebImageManager.sharedManager().saveImageToCache(image, forURL: url)
+                            self.iconView.image = image
+                    })
+                }else{
+                    self.iconView.sd_setImageWithURL(url)
+                }
+                
+                
             }
             
             // 认证
@@ -40,7 +52,7 @@ class WBStatusTopView: UIView {
             
             // 微博来源
             sourceLabel.text = status?.source
-      
+            
         }
     }
     
@@ -52,9 +64,9 @@ class WBStatusTopView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-    
+        
         // 添加控件
-        addSubview(topSeparatorView)
+        self.layer.addSublayer(topSeparatorView)// addSubview(topSeparatorView)
         addSubview(iconView)
         addSubview(verifiedView)
         addSubview(nameLabel)
@@ -65,15 +77,15 @@ class WBStatusTopView: UIView {
         
         // 约束控件
         // 顶部分割线
-        topSeparatorView.snp_makeConstraints { (make) -> Void in
-            make.left.top.right.equalTo(0)
-            make.height.equalTo(10)
-        }
-        
+        //        topSeparatorView.snp_makeConstraints { (make) -> Void in
+        //            make.left.top.right.equalTo(0)
+        //            make.height.equalTo(10)
+        //        }
+        //
         // 头像图标
         iconView.snp_makeConstraints { (make) -> Void in
             make.size.equalTo(CGSize(width: 35, height: 35))
-            make.top.equalTo(topSeparatorView.snp_bottom).offset(statusMargin)
+            make.top.equalTo(22)
             make.left.equalTo(statusMargin)
         }
         
@@ -117,16 +129,17 @@ class WBStatusTopView: UIView {
         
     }
     
-   
+    
     
     // MARK: - 懒加载topView子控件
     // 用户头像
     private lazy var iconView: UIImageView = {
         let imageView = UIImageView()
-        imageView.layer.cornerRadius = 17.5
-        imageView.layer.shouldRasterize = true
-        imageView.layer.rasterizationScale = UIScreen.mainScreen().scale
-        imageView.layer.masksToBounds = true
+        imageView.image = UIImage(named: "avatar")
+        //        imageView.layer.cornerRadius = 17.5
+        //        imageView.layer.shouldRasterize = true
+        //        imageView.layer.rasterizationScale = UIScreen.mainScreen().scale
+        //        imageView.layer.masksToBounds = true
         return imageView
     }()
     
@@ -158,10 +171,11 @@ class WBStatusTopView: UIView {
     private lazy var sourceLabel = UILabel(textColor: UIColor.lightGrayColor(), fontSize: 9)
     
     // 顶部分割线
-    private lazy var topSeparatorView: UIView = {
-        let view = UIView()
-        //view.backgroundColor = UIColor(white: 0.9, alpha: 0.4)
-        return view
+    private lazy var topSeparatorView: CALayer = {
+        let layer = CALayer()
+        layer.backgroundColor = UIColor(white: 0.9, alpha: 0.4).CGColor
+        layer.frame = CGRect(x: 0, y: 0, width: kScreenW , height: 10)
+        return layer
     }()
     // 右侧小角标
     private lazy var righeMoreBtn:UIButton = {

@@ -50,8 +50,8 @@ class WBStatusPictureViewCell: UICollectionViewCell {
     // 图片
     lazy var iconView: UIImageView = {
         let imageView = UIImageView()
-        imageView.contentMode = UIViewContentMode.ScaleAspectFill
-        imageView.clipsToBounds = true
+//        imageView.contentMode = UIViewContentMode.ScaleAspectFill
+//        imageView.clipsToBounds = true
         return imageView
     }()
     
