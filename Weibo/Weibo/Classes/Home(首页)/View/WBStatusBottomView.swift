@@ -49,60 +49,36 @@ class WBStatusBottomView: UIView {
         addSubview(forwardButton)
         addSubview(commentButton)
         addSubview(likeButton)
-        addSubview(separatorViewOne)
-        addSubview(separatorViewTwo)
-        addSubview(separatorViewTop)
-        addSubview(separatorViewBottom)
         
+        layer.addSublayer(separatorViewOne)
+        layer.addSublayer(separatorViewTwo)
+        layer.addSublayer(separatorViewTop)
+        layer.addSublayer(separatorViewBottom)
         
-    }
-
-    override func layoutSubviews() {
-        
-        super.layoutSubviews()
+        let w:CGFloat = kScreenW / 3
+        let h:CGFloat = 30
         // 转发
-        forwardButton.snp_makeConstraints { (make) -> Void in
-            make.top.left.equalTo(0)
-            make.width.equalTo(kScreenW / 3)
-            make.height.equalTo(self.bounds.height)
-        }
+        forwardButton.frame = CGRectMake(0, 0, w, h)
         // 评论
-        commentButton.snp_makeConstraints { (make) -> Void in
-            make.top.width.height.equalTo(forwardButton)
-            make.left.equalTo(forwardButton.snp_right)
-        }
+        commentButton.frame = CGRectMake(w, 0, w, h)
         // 赞
-        likeButton.snp_makeConstraints { (make) -> Void in
-            make.top.width.height.equalTo(commentButton)
-            make.left.equalTo(commentButton.snp_right)
-        }
+        likeButton.frame = CGRectMake(w * 2, 0, w, h)
+        
         // 分割线1
-        separatorViewOne.snp_makeConstraints { (make) -> Void in
-            make.left.equalTo(forwardButton.snp_right)
-            make.top.equalTo(8)
-            make.width.equalTo(1)
-            make.bottom.equalTo(-8)
-        }
+        separatorViewOne.frame = CGRectMake(kScreenW / 3, 8, 1, 14)
+        
         // 分割线2
-        separatorViewTwo.snp_makeConstraints { (make) -> Void in
-            make.left.equalTo(commentButton.snp_right)
-            make.top.equalTo(8)
-            make.width.equalTo(1)
-            make.bottom.equalTo(-8)
-        }
+        separatorViewTwo.frame = CGRectMake(kScreenW / 3 * 2, 8, 1, 14)
+        
         // 顶部分割线
-        separatorViewTop.snp_makeConstraints { (make) -> Void in
-            make.left.right.top.equalTo(0)
-            make.height.equalTo(1)
-        }
+        separatorViewTop.frame = CGRectMake(0, 0, kScreenW, 1)
         // 底部分割线
-        separatorViewBottom.snp_makeConstraints { (make) -> Void in
-            make.left.right.bottom.equalTo(0)
-            make.height.equalTo(1)
-        }
+        separatorViewBottom.frame = CGRectMake(0, 29, kScreenW, 1)
         
 
+        
     }
+
     
     // MARK: - 懒加载控件
     // 转发
@@ -130,21 +106,31 @@ class WBStatusBottomView: UIView {
     }()
     
     // 水平分割线
-    private lazy var separatorViewOne = UIImageView(image: UIImage(named: "timeline_card_bottom_line_highlighted"))
-    private lazy var separatorViewTwo = UIImageView(image: UIImage(named: "timeline_card_bottom_line_highlighted"))
-    
-    // 顶部分割线
-    private lazy var separatorViewTop: UIView = {
-        let view = UIView()
-        view.backgroundColor = UIColor(white: 0.9, alpha: 0.4)
-        return view
-        }()
-    
-    // 底部分割线
-    private lazy var separatorViewBottom: UIView = {
-        let view = UIView()
-        view.backgroundColor = UIColor(white: 0.9, alpha: 0.4)
-        return view
+    private lazy var separatorViewOne: CALayer = {
+        let layer = CALayer()
+        layer.backgroundColor = UIColor(white: 0.9, alpha: 1.0).CGColor
+        return layer
     }()
+    private lazy var separatorViewTwo: CALayer = {
+        let layer = CALayer()
+        layer.backgroundColor = UIColor(white: 0.9, alpha: 1.0).CGColor
+        return layer
+    }()
+
+    
+
+    // 顶部分割线
+    private lazy var separatorViewTop: CALayer = {
+        let layer = CALayer()
+        layer.backgroundColor = UIColor(white: 0.9, alpha: 1.0).CGColor
+        return layer
+    }()
+    // 底部分割线
+    private lazy var separatorViewBottom: CALayer = {
+        let layer = CALayer()
+        layer.backgroundColor = UIColor(white: 0.9, alpha: 1.0).CGColor
+        return layer
+    }()
+   
     
 }
