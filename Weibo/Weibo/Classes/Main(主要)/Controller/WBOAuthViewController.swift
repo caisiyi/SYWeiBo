@@ -49,8 +49,7 @@ class WBOAuthViewController: UIViewController, UIWebViewDelegate {
      自动填充用户名和密码
      */
     func autoFillUsernameAndPassword() {
-        // 我的帐户,别泄露了－ －，到时候讲课的时候用个测试账号申请个应用
-        //webView.stringByEvaluatingJavaScriptFromString("document.getElementById('userId').value = '15985929293 ';" + "document.getElementById('passwd').value = 'siyicai123';")
+        //webView.stringByEvaluatingJavaScriptFromString("document.getElementById('userId').value = 'XXXX ';" + "document.getElementById('passwd').value = 'XXXX';")
     }
     
     // MARK: - UIWebViewDelegate
