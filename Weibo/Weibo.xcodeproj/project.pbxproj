@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		99192B451C942FDB00F4FBA5 /* FFLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99192B441C942FDB00F4FBA5 /* FFLabel.swift */; };
+		991EB7851C9845DD00F9AA51 /* SYAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991EB7821C9845DD00F9AA51 /* SYAlertViewController.swift */; };
+		991EB7861C9845DD00F9AA51 /* SYAlertViewControllerDismissAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991EB7831C9845DD00F9AA51 /* SYAlertViewControllerDismissAnimation.swift */; };
+		991EB7871C9845DD00F9AA51 /* SYAlertViewControllerPresentedAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991EB7841C9845DD00F9AA51 /* SYAlertViewControllerPresentedAnimation.swift */; };
 		991EFB6C1C7F3249003FA593 /* WBUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991EFB6B1C7F3249003FA593 /* WBUser.swift */; };
 		991EFB6E1C7F3262003FA593 /* WBStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991EFB6D1C7F3262003FA593 /* WBStatus.swift */; };
 		991EFB911C7F3525003FA593 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 991EFB711C7F3525003FA593 /* MKAnnotationView+WebCache.m */; };
@@ -204,6 +207,9 @@
 
 /* Begin PBXFileReference section */
 		99192B441C942FDB00F4FBA5 /* FFLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFLabel.swift; sourceTree = "<group>"; };
+		991EB7821C9845DD00F9AA51 /* SYAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYAlertViewController.swift; sourceTree = "<group>"; };
+		991EB7831C9845DD00F9AA51 /* SYAlertViewControllerDismissAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYAlertViewControllerDismissAnimation.swift; sourceTree = "<group>"; };
+		991EB7841C9845DD00F9AA51 /* SYAlertViewControllerPresentedAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYAlertViewControllerPresentedAnimation.swift; sourceTree = "<group>"; };
 		991EFB6B1C7F3249003FA593 /* WBUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBUser.swift; sourceTree = "<group>"; };
 		991EFB6D1C7F3262003FA593 /* WBStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatus.swift; sourceTree = "<group>"; };
 		991EFB701C7F3525003FA593 /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
@@ -551,6 +557,16 @@
 			path = FFLabel;
 			sourceTree = "<group>";
 		};
+		991EB7811C9845DD00F9AA51 /* SYAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				991EB7821C9845DD00F9AA51 /* SYAlertViewController.swift */,
+				991EB7831C9845DD00F9AA51 /* SYAlertViewControllerDismissAnimation.swift */,
+				991EB7841C9845DD00F9AA51 /* SYAlertViewControllerPresentedAnimation.swift */,
+			);
+			path = SYAlertView;
+			sourceTree = "<group>";
+		};
 		991EFB6F1C7F3525003FA593 /* SDWebImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -833,10 +849,10 @@
 		998E7D271C7748F000C805A5 /* Main(主要) */ = {
 			isa = PBXGroup;
 			children = (
+				998E7D291C7748F000C805A5 /* Controller */,
+				998E7D281C7748F000C805A5 /* Category */,
 				99B505B31C9422BA00D13FCC /* Helper */,
 				9990F5A41C798C3B002D8400 /* Tools */,
-				998E7D281C7748F000C805A5 /* Category */,
-				998E7D291C7748F000C805A5 /* Controller */,
 				998E7D2A1C7748F000C805A5 /* Lib */,
 				998E7D2B1C7748F000C805A5 /* Model */,
 				998E7D2C1C7748F000C805A5 /* Other */,
@@ -874,6 +890,7 @@
 		998E7D2A1C7748F000C805A5 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				991EB7811C9845DD00F9AA51 /* SYAlertView */,
 				99CDEFCB1C96F5F8000E5E07 /* PhotoBrowser */,
 				99DDF0D61C95719E003D8FEC /* DZNEmptyDataSet */,
 				997ECF461C954FDE00FFBAD7 /* Emoticon */,
@@ -1470,6 +1487,7 @@
 				99B5058A1C941DE600D13FCC /* YYWebImageOperation.m in Sources */,
 				991EFBD51C7F445A003FA593 /* MJRefreshAutoStateFooter.m in Sources */,
 				99CDEFD21C96F5F8000E5E07 /* SYPhotoBrowserImageView.swift in Sources */,
+				991EB7871C9845DD00F9AA51 /* SYAlertViewControllerPresentedAnimation.swift in Sources */,
 				99AEDF971C7DED1D00031F2C /* WBNetworkError.swift in Sources */,
 				99B505971C941DE600D13FCC /* NSParagraphStyle+YYText.m in Sources */,
 				99CDEFD31C96F5F8000E5E07 /* SYPhotoBrowserDismissAnimation.swift in Sources */,
@@ -1493,6 +1511,7 @@
 				991EFBD71C7F445A003FA593 /* MJRefreshBackNormalFooter.m in Sources */,
 				99B505A71C941DE600D13FCC /* YYSentinel.m in Sources */,
 				99B5055F1C941DE600D13FCC /* NSDate+YYAdd.m in Sources */,
+				991EB7861C9845DD00F9AA51 /* SYAlertViewControllerDismissAnimation.swift in Sources */,
 				998E7D0D1C7746B800C805A5 /* AppDelegate.swift in Sources */,
 				99B505861C941DE600D13FCC /* YYImageCache.m in Sources */,
 				991EFBDA1C7F445A003FA593 /* MJRefreshNormalHeader.m in Sources */,
@@ -1627,6 +1646,7 @@
 				99C04EB41C84332900F42E80 /* ConstraintDescription.swift in Sources */,
 				99B505751C941DE600D13FCC /* UIScreen+YYAdd.m in Sources */,
 				99B505B91C942CE800D13FCC /* YYFPSLabel.m in Sources */,
+				991EB7851C9845DD00F9AA51 /* SYAlertViewController.swift in Sources */,
 				99B5058C1C941DE600D13FCC /* YYClassInfo.m in Sources */,
 				99B505A21C941DE600D13FCC /* YYDispatchQueuePool.m in Sources */,
 				99B5058B1C941DE600D13FCC /* NSObject+YYModel.m in Sources */,
