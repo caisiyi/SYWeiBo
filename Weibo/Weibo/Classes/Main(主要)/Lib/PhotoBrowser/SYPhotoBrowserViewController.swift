@@ -47,6 +47,9 @@ class SYPhotoBrowserViewController: UIViewController {
         // 准备UI
         prepareCollectionView()
         
+        if models.count == 1 {
+            pageIndicator.hidden = true
+        }
         // 更新页码显示
         pageIndicator.text = "\(index + 1) / \(models.count)"
         
@@ -84,6 +87,7 @@ class SYPhotoBrowserViewController: UIViewController {
         view.addSubview(backgroundView)
         view.addSubview(collectionView)
         view.addSubview(pageIndicator)
+        view.addSubview(moreBtn)
 //        view.addSubview(closeButton)
 //        view.addSubview(saveButton)
         
@@ -110,22 +114,41 @@ class SYPhotoBrowserViewController: UIViewController {
         
         // 页码指示器
         pageIndicator.snp_makeConstraints { (make) -> Void in
-            make.top.equalTo(30)
+            make.top.equalTo(22)
             make.centerX.equalTo(view.snp_centerX)
         }
         
-//        // 关闭按钮
-//        closeButton.snp_makeConstraints { (make) -> Void in
-//            make.left.equalTo(50)
-//            make.bottom.equalTo(-30)
-//        }
-//        
-//        // 保存按钮
-//        saveButton.snp_makeConstraints { (make) -> Void in
-//            make.right.equalTo(-50)
-//            make.bottom.equalTo(-30)
-//        }
+
+        // 更多按钮
+        moreBtn.snp_makeConstraints { (make) -> Void in
+            make.centerY.equalTo(pageIndicator)
+            make.right.equalTo(-16)
+            make.width.height.equalTo(36)
+        }
         
+    }
+    
+    func ClickMore(sender:UIButton){
+        let vc = SYAlertViewController(items: ["保存图片","转发微博","赞"])
+        vc.addItemsAction { (sender) -> () in
+            if sender.tag == 1 {
+                // 获取真正显示的item的idnexPath
+                guard let indexPath = self.collectionView.indexPathsForVisibleItems().first else {
+                    return
+                }
+                
+                // 获取当前显示的图片
+                let cell = self.collectionView.cellForItemAtIndexPath(indexPath) as! SYPhotoBrowserViewCell
+                
+                guard let image = cell.imgView.image else {
+                    return
+                }
+                
+                // 保存图片到相册
+                UIImageWriteToSavedPhotosAlbum(image, self, "image:didFinishSavingWithError:contextInfo:", nil)
+            }
+        }
+        presentViewController(vc, animated: true, completion: nil)
     }
     
     /// 图片保存后的回调方法
@@ -143,48 +166,22 @@ class SYPhotoBrowserViewController: UIViewController {
     
     // 页码
     private lazy var pageIndicator: UILabel = {
-        let label = UILabel(textColor: UIColor.whiteColor(), fontSize: 12)
+        let label = UILabel(textColor: UIColor.whiteColor(), fontSize: 22)
         label.sizeToFit()
         return label
     }()
     
-//    // 关闭按钮
-//    private lazy var closeButton: UIButton = {
-//        let button = UIButton()
-//        button.setTitle("关闭", forState: UIControlState.Normal)
-//        button.rac_signalForControlEvents(UIControlEvents.TouchUpInside).subscribeNext({ (_) -> Void in
-//            // 关闭控制器
-//            self.dismissViewControllerAnimated(true, completion: nil)
-//        })
-//        button.sizeToFit()
-//        return button
-//    }()
-//    
-//    // 保存按钮
-//    private lazy var saveButton: UIButton = {
-//        let button = UIButton()
-//        button.setTitle("保存", forState: UIControlState.Normal)
-//        button.rac_signalForControlEvents(UIControlEvents.TouchUpInside).subscribeNext({ (_) -> Void in
-//            
-//            // 获取真正显示的item的idnexPath
-//            guard let indexPath = self.collectionView.indexPathsForVisibleItems().first else {
-//                return
-//            }
-//            
-//            // 获取当前显示的图片
-//            let cell = self.collectionView.cellForItemAtIndexPath(indexPath) as! JFPhotoBrowserViewCell
-//            
-//            guard let image = cell.imgView.image else {
-//                JFProgressHUD.jf_showErrorWithStatus("保存失败")
-//                return
-//            }
-//
-//            // 保存图片到相册
-//            UIImageWriteToSavedPhotosAlbum(image, self, "image:didFinishSavingWithError:contextInfo:", nil)
-//        })
-//        button.sizeToFit()
-//        return button
-//    }()
+    private lazy var moreBtn: UIButton = {
+        let button = UIButton()
+        button.setTitle("∙ ∙ ∙", forState: UIControlState.Normal)
+        button.titleLabel?.font = UIFont.systemFontOfSize(22)
+        button.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        button.addTarget(self, action: "ClickMore:", forControlEvents: UIControlEvents.TouchUpInside)
+        button.sizeToFit()
+        return button
+    }()
+    
+
     
     /// 背景视图,转场动画时用来设置透明度
     lazy var backgroundView: UIView = {
