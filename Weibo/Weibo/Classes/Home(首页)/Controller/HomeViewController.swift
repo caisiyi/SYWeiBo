@@ -294,11 +294,26 @@ extension HomeViewController :UITableViewDataSource,UITableViewDelegate{
         // 创建可重用的cell
         let cell = tableView.dequeueReusableCellWithIdentifier(WBStatusCellIdentifier.cellId(status!), forIndexPath: indexPath) as! WBStatusCell
         
+        cell.delegate = self
+        
         // 设置cell数据
         cell.status = status
-      
+        
+        
         
         return cell
+    }
+}
+extension HomeViewController:WBStatusCellDelegate{
+    func ClickMoreBtn(cell: WBStatusCell) {
+        let vc = SYAlertViewController(items: ["收藏","帮上头条","取消关注","屏蔽","举报"])
+        vc.addItemsAction { (sender) -> () in
+          
+        }
+        vc.addcancelAction { (sender) -> () in
+         
+        }
+        presentViewController(vc, animated: true, completion: nil)
     }
 }
 extension HomeViewController:DZNEmptyDataSetSource,DZNEmptyDataSetDelegate{

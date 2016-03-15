@@ -13,6 +13,7 @@ import UIKit
 
 class WBStatusTopView: UIView {
     
+    
     /// 微博模型
     var status: WBStatus? {
         didSet {
@@ -66,7 +67,7 @@ class WBStatusTopView: UIView {
         
         
         // 添加控件
-        self.layer.addSublayer(topSeparatorView)// addSubview(topSeparatorView)
+        self.layer.addSublayer(topSeparatorView)
         addSubview(iconView)
         addSubview(verifiedView)
         addSubview(nameLabel)
@@ -75,13 +76,9 @@ class WBStatusTopView: UIView {
         addSubview(sourceLabel)
         addSubview(righeMoreBtn)
         
+        righeMoreBtn.addTarget(self, action: "TouchUpInside:", forControlEvents: UIControlEvents.TouchUpInside)
+        
         // 约束控件
-        // 顶部分割线
-        //        topSeparatorView.snp_makeConstraints { (make) -> Void in
-        //            make.left.top.right.equalTo(0)
-        //            make.height.equalTo(10)
-        //        }
-        //
         // 头像图标
         iconView.snp_makeConstraints { (make) -> Void in
             make.size.equalTo(CGSize(width: 35, height: 35))
@@ -124,12 +121,17 @@ class WBStatusTopView: UIView {
         // 右上方小角标
         righeMoreBtn.snp_makeConstraints { (make) -> Void in
             make.top.equalTo(nameLabel.snp_top)
+            make.width.height.equalTo(32)
             make.right.equalTo(-10)
         }
         
     }
     
-    
+    func TouchUpInside(sender:UIButton){
+        if let superCell = superview?.superview as? WBStatusCell {
+        superCell.delegate?.ClickMoreBtn!(superCell)
+        }
+    }
     
     // MARK: - 懒加载topView子控件
     // 用户头像

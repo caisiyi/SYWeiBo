@@ -9,15 +9,19 @@
 import UIKit
 
 
-
+@objc protocol WBStatusCellDelegate{
+    optional func ClickMoreBtn(cell:WBStatusCell)
+}
 
 class WBStatusCell: UITableViewCell {
     
-   
+    
+    var delegate:WBStatusCellDelegate?
+    
     /// 微博模型
     var status: WBStatus? {
         didSet {
-            
+        
             // 微博文本
             contentLabel.attributedText = status?.attributedText
             
