@@ -35,7 +35,7 @@ class WBStatus: NSObject {
             guard let timeString = created_at else{
                 return nil
             }
-            return NSDate(fromString: timeString, format: "EEE MMM dd HH:mm:ss zzz yyyy")?.timePassed()
+            return NSDate.sinaDateToDate(timeString)?.timePassed()
         }
     }
     /// 微博ID

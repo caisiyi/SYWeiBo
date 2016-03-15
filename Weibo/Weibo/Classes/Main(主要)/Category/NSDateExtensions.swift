@@ -6,30 +6,29 @@
 //  Copyright © 2016年 caisiyi. All rights reserved.
 //
 import UIKit
+
 struct Formatter {
-    
-    static var fmt : NSDateFormatter?
-    static var token: dispatch_once_t = 0
-    
+    static var fmt = NSDateFormatter()
 }
 extension NSDate {
-    
-    public convenience init?(fromString string: String, format: String) {
-        let formatter = NSDateFormatter()
-        formatter.dateFormat = format
-        if let date = formatter.dateFromString(string) {
-            self.init(timeInterval: 0, sinceDate: date)
-        } else {
-            return nil
-        }
+
+    /**
+     将新浪日期转成系统日期 如:2015-05-24 04:12:00 +0000
+     - parameter string: 新浪日期
+     - returns: 系统日期
+     */
+    class func sinaDateToDate(string: String) -> NSDate? {
+        
+        NSDate.defaultFormatter.dateFormat = "EEE MMM dd HH:mm:ss zzz yyyy"
+        
+        return NSDate.defaultFormatter.dateFromString(string)
+        
     }
+    
     class var defaultFormatter:NSDateFormatter {
-        dispatch_once(&Formatter.token) {
-            let formatter = NSDateFormatter()
-            formatter.locale = NSLocale(localeIdentifier: "en")
-            Formatter.fmt = formatter
-        }
-        return Formatter.fmt!
+   
+        Formatter.fmt.locale = NSLocale(localeIdentifier: "en")
+        return Formatter.fmt
         
     }
     ///  返回日期描述字符串
@@ -88,7 +87,6 @@ extension NSDate {
         
         
         
-        // 创建NSDateFormatter
         NSDate.defaultFormatter.dateFormat = fmtString
         
         return NSDate.defaultFormatter.stringFromDate(self)
