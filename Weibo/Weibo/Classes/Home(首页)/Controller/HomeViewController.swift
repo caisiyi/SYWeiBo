@@ -212,7 +212,7 @@ class HomeViewController: UIViewController,WBDropdownMenuDelegate {
         
         /* 设置导航栏上面的内容 */
         navigationItem.leftBarButtonItem = UIBarButtonItem(target: self, action: "friendSearch", image: "navigationbar_friendsearch", highImage: "navigationbar_friendsearch_highlighted")
-        navigationItem.rightBarButtonItem = UIBarButtonItem(target: self, action: "pop", image: "navigationbar_pop", highImage: "navigationbar_pop_highlighted")
+        navigationItem.rightBarButtonItem = UIBarButtonItem(target: self, action: "pop", image: "navigationbar_icon_radar", highImage: "navigationbar_icon_radar_highlighted")
      
         // 设置图片和文字
         titleButton.setTitle(WBUserAccount.shareUserAccount.name ??  "首页", forState: UIControlState.Normal)

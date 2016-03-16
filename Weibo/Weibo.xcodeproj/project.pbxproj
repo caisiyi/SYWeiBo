@@ -58,6 +58,8 @@
 		9935EDC41C8483B500B8934A /* UILable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9935EDC31C8483B500B8934A /* UILable+Extension.swift */; };
 		9935EDC61C8483C100B8934A /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9935EDC51C8483C100B8934A /* UIButton+Extension.swift */; };
 		9935EDC81C8483D800B8934A /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9935EDC71C8483D800B8934A /* Common.swift */; };
+		99578C1D1C993F7C00D9F57F /* WBCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99578C1C1C993F7C00D9F57F /* WBCenterViewController.swift */; };
+		99578C1F1C993F8000D9F57F /* WBCenterItemButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99578C1E1C993F8000D9F57F /* WBCenterItemButton.swift */; };
 		996B97681C7DD8D200C843BC /* WBUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B97671C7DD8D200C843BC /* WBUserAccount.swift */; };
 		997EC8FE1C7963DF00923DC2 /* NewfeatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997EC8FD1C7963DF00923DC2 /* NewfeatureViewController.swift */; };
 		997ECF6A1C954FDE00FFBAD7 /* WBEmoticon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997ECF561C954FDE00FFBAD7 /* WBEmoticon.swift */; };
@@ -293,6 +295,8 @@
 		9935EDC31C8483B500B8934A /* UILable+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILable+Extension.swift"; sourceTree = "<group>"; };
 		9935EDC51C8483C100B8934A /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		9935EDC71C8483D800B8934A /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		99578C1C1C993F7C00D9F57F /* WBCenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBCenterViewController.swift; sourceTree = "<group>"; };
+		99578C1E1C993F8000D9F57F /* WBCenterItemButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBCenterItemButton.swift; sourceTree = "<group>"; };
 		996B97671C7DD8D200C843BC /* WBUserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBUserAccount.swift; sourceTree = "<group>"; };
 		997EC8FD1C7963DF00923DC2 /* NewfeatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewfeatureViewController.swift; sourceTree = "<group>"; };
 		997ECF561C954FDE00FFBAD7 /* WBEmoticon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBEmoticon.swift; sourceTree = "<group>"; };
@@ -712,6 +716,31 @@
 			path = GCDKit;
 			sourceTree = "<group>";
 		};
+		99578C191C993F7500D9F57F /* Plus(加号菜单) */ = {
+			isa = PBXGroup;
+			children = (
+				99578C1A1C993F7500D9F57F /* Controller */,
+				99578C1B1C993F7500D9F57F /* View */,
+			);
+			path = "Plus(加号菜单)";
+			sourceTree = "<group>";
+		};
+		99578C1A1C993F7500D9F57F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				99578C1C1C993F7C00D9F57F /* WBCenterViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		99578C1B1C993F7500D9F57F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				99578C1E1C993F8000D9F57F /* WBCenterItemButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		997EC8FB1C7963BC00923DC2 /* Newfeature(新特性) */ = {
 			isa = PBXGroup;
 			children = (
@@ -766,6 +795,7 @@
 		998E7D1E1C7748F000C805A5 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				99578C191C993F7500D9F57F /* Plus(加号菜单) */,
 				997EC8FB1C7963BC00923DC2 /* Newfeature(新特性) */,
 				998E7D1F1C7748F000C805A5 /* Discover(发现) */,
 				998E7D231C7748F000C805A5 /* Home(首页) */,
@@ -1532,6 +1562,7 @@
 				998E7D381C774E0F00C805A5 /* DiscoverViewController.swift in Sources */,
 				99B505A91C941DE600D13FCC /* YYThreadSafeDictionary.m in Sources */,
 				99B505701C941DE600D13FCC /* UIControl+YYAdd.m in Sources */,
+				99578C1D1C993F7C00D9F57F /* WBCenterViewController.swift in Sources */,
 				99CDEFBA1C969594000E5E07 /* WBStatusLayout.swift in Sources */,
 				991EFB9E1C7F3525003FA593 /* UIImageView+HighlightedWebCache.m in Sources */,
 				99C04EA31C84321C00F42E80 /* WBStatusBottomView.swift in Sources */,
@@ -1633,6 +1664,7 @@
 				99E646FB1C77544800812C7E /* WBTabBarViewController.swift in Sources */,
 				9935EDC81C8483D800B8934A /* Common.swift in Sources */,
 				99B505621C941DE600D13FCC /* NSNotificationCenter+YYAdd.m in Sources */,
+				99578C1F1C993F8000D9F57F /* WBCenterItemButton.swift in Sources */,
 				99C04EB51C84332900F42E80 /* ConstraintItem.swift in Sources */,
 				99E646FF1C7759AD00812C7E /* UIBarButtonItem+Extension.swift in Sources */,
 				991EFBD91C7F445A003FA593 /* MJRefreshGifHeader.m in Sources */,

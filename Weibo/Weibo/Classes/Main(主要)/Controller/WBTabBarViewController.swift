@@ -58,8 +58,8 @@ class WBTabBarViewController: UITabBarController,WBTabBarDelegate {
     }
    
     func tabBarDidClickPlusButton(tabBar: WBTabBar) {
-        let vc = UIViewController()
-        vc.view.backgroundColor = UIColor.redColor()
+        let vc = WBCenterViewController()
+        vc.view.backgroundColor = UIColor.whiteColor()
         self.presentViewController(vc, animated: true, completion: nil)
     }
     override func didReceiveMemoryWarning() {
