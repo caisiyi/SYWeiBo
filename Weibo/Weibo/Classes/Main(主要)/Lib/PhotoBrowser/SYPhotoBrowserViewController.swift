@@ -123,7 +123,6 @@ class SYPhotoBrowserViewController: UIViewController {
         moreBtn.snp_makeConstraints { (make) -> Void in
             make.centerY.equalTo(pageIndicator)
             make.right.equalTo(-16)
-            make.width.height.equalTo(36)
         }
         
     }
@@ -166,7 +165,7 @@ class SYPhotoBrowserViewController: UIViewController {
     
     // 页码
     private lazy var pageIndicator: UILabel = {
-        let label = UILabel(textColor: UIColor.whiteColor(), fontSize: 22)
+        let label = UILabel(textColor: UIColor.whiteColor(), fontSize: 21)
         label.sizeToFit()
         return label
     }()
@@ -174,7 +173,7 @@ class SYPhotoBrowserViewController: UIViewController {
     private lazy var moreBtn: UIButton = {
         let button = UIButton()
         button.setTitle("∙ ∙ ∙", forState: UIControlState.Normal)
-        button.titleLabel?.font = UIFont.systemFontOfSize(22)
+        button.titleLabel?.font = UIFont.systemFontOfSize(21)
         button.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         button.addTarget(self, action: "ClickMore:", forControlEvents: UIControlEvents.TouchUpInside)
         button.sizeToFit()

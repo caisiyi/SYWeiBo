@@ -60,10 +60,28 @@
 		9935EDC81C8483D800B8934A /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9935EDC71C8483D800B8934A /* Common.swift */; };
 		99578C1D1C993F7C00D9F57F /* WBCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99578C1C1C993F7C00D9F57F /* WBCenterViewController.swift */; };
 		99578C1F1C993F8000D9F57F /* WBCenterItemButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99578C1E1C993F8000D9F57F /* WBCenterItemButton.swift */; };
+		99578C2C1C99A09300D9F57F /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 99578C221C99A09300D9F57F /* FMDatabase.m */; };
+		99578C2D1C99A09300D9F57F /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 99578C241C99A09300D9F57F /* FMDatabaseAdditions.m */; };
+		99578C2E1C99A09300D9F57F /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 99578C261C99A09300D9F57F /* FMDatabasePool.m */; };
+		99578C2F1C99A09300D9F57F /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 99578C281C99A09300D9F57F /* FMDatabaseQueue.m */; };
+		99578C301C99A09300D9F57F /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 99578C2B1C99A09300D9F57F /* FMResultSet.m */; };
+		99578C331C99A1C000D9F57F /* WBStatusManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99578C321C99A1C000D9F57F /* WBStatusManager.swift */; };
+		996A131A1C9A8D9000EA97D2 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A13191C9A8D9000EA97D2 /* SwiftyJSON.swift */; };
 		996B97681C7DD8D200C843BC /* WBUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996B97671C7DD8D200C843BC /* WBUserAccount.swift */; };
 		997EC8FE1C7963DF00923DC2 /* NewfeatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997EC8FD1C7963DF00923DC2 /* NewfeatureViewController.swift */; };
 		997ECF6A1C954FDE00FFBAD7 /* WBEmoticon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997ECF561C954FDE00FFBAD7 /* WBEmoticon.swift */; };
 		997ECF711C95504800FFBAD7 /* WBTextAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997ECF701C95504800FFBAD7 /* WBTextAttachment.swift */; };
+		997F28E31C99AB7D007FEB3A /* MJDictionaryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 997F28CD1C99AB7D007FEB3A /* MJDictionaryCache.m */; };
+		997F28E41C99AB7D007FEB3A /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 997F28D01C99AB7D007FEB3A /* MJExtensionConst.m */; };
+		997F28E51C99AB7D007FEB3A /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 997F28D21C99AB7D007FEB3A /* MJFoundation.m */; };
+		997F28E61C99AB7D007FEB3A /* MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 997F28D41C99AB7D007FEB3A /* MJProperty.m */; };
+		997F28E71C99AB7D007FEB3A /* MJPropertyKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 997F28D61C99AB7D007FEB3A /* MJPropertyKey.m */; };
+		997F28E81C99AB7D007FEB3A /* MJPropertyType.m in Sources */ = {isa = PBXBuildFile; fileRef = 997F28D81C99AB7D007FEB3A /* MJPropertyType.m */; };
+		997F28E91C99AB7D007FEB3A /* NSObject+MJClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 997F28DA1C99AB7D007FEB3A /* NSObject+MJClass.m */; };
+		997F28EA1C99AB7D007FEB3A /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 997F28DC1C99AB7D007FEB3A /* NSObject+MJCoding.m */; };
+		997F28EB1C99AB7D007FEB3A /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 997F28DE1C99AB7D007FEB3A /* NSObject+MJKeyValue.m */; };
+		997F28EC1C99AB7D007FEB3A /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 997F28E01C99AB7D007FEB3A /* NSObject+MJProperty.m */; };
+		997F28ED1C99AB7D007FEB3A /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 997F28E21C99AB7D007FEB3A /* NSString+MJExtension.m */; };
 		998B6BF81C780B9200E58897 /* WBSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998B6BF71C780B9200E58897 /* WBSearchBar.swift */; };
 		998B6BFA1C780E5B00E58897 /* WBDropdownMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998B6BF91C780E5B00E58897 /* WBDropdownMenu.swift */; };
 		998B6BFC1C78122E00E58897 /* HomeTitleMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998B6BFB1C78122E00E58897 /* HomeTitleMenuViewController.swift */; };
@@ -297,10 +315,46 @@
 		9935EDC71C8483D800B8934A /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		99578C1C1C993F7C00D9F57F /* WBCenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBCenterViewController.swift; sourceTree = "<group>"; };
 		99578C1E1C993F8000D9F57F /* WBCenterItemButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBCenterItemButton.swift; sourceTree = "<group>"; };
+		99578C211C99A09300D9F57F /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		99578C221C99A09300D9F57F /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		99578C231C99A09300D9F57F /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		99578C241C99A09300D9F57F /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		99578C251C99A09300D9F57F /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		99578C261C99A09300D9F57F /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		99578C271C99A09300D9F57F /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		99578C281C99A09300D9F57F /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		99578C291C99A09300D9F57F /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		99578C2A1C99A09300D9F57F /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		99578C2B1C99A09300D9F57F /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		99578C321C99A1C000D9F57F /* WBStatusManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatusManager.swift; sourceTree = "<group>"; };
+		996A13191C9A8D9000EA97D2 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		996B97671C7DD8D200C843BC /* WBUserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBUserAccount.swift; sourceTree = "<group>"; };
 		997EC8FD1C7963DF00923DC2 /* NewfeatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewfeatureViewController.swift; sourceTree = "<group>"; };
 		997ECF561C954FDE00FFBAD7 /* WBEmoticon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBEmoticon.swift; sourceTree = "<group>"; };
 		997ECF701C95504800FFBAD7 /* WBTextAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WBTextAttachment.swift; path = Emotion/WBTextAttachment.swift; sourceTree = "<group>"; };
+		997F28CC1C99AB7D007FEB3A /* MJDictionaryCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJDictionaryCache.h; sourceTree = "<group>"; };
+		997F28CD1C99AB7D007FEB3A /* MJDictionaryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJDictionaryCache.m; sourceTree = "<group>"; };
+		997F28CE1C99AB7D007FEB3A /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
+		997F28CF1C99AB7D007FEB3A /* MJExtensionConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtensionConst.h; sourceTree = "<group>"; };
+		997F28D01C99AB7D007FEB3A /* MJExtensionConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJExtensionConst.m; sourceTree = "<group>"; };
+		997F28D11C99AB7D007FEB3A /* MJFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJFoundation.h; sourceTree = "<group>"; };
+		997F28D21C99AB7D007FEB3A /* MJFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJFoundation.m; sourceTree = "<group>"; };
+		997F28D31C99AB7D007FEB3A /* MJProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJProperty.h; sourceTree = "<group>"; };
+		997F28D41C99AB7D007FEB3A /* MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJProperty.m; sourceTree = "<group>"; };
+		997F28D51C99AB7D007FEB3A /* MJPropertyKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPropertyKey.h; sourceTree = "<group>"; };
+		997F28D61C99AB7D007FEB3A /* MJPropertyKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPropertyKey.m; sourceTree = "<group>"; };
+		997F28D71C99AB7D007FEB3A /* MJPropertyType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPropertyType.h; sourceTree = "<group>"; };
+		997F28D81C99AB7D007FEB3A /* MJPropertyType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPropertyType.m; sourceTree = "<group>"; };
+		997F28D91C99AB7D007FEB3A /* NSObject+MJClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJClass.h"; sourceTree = "<group>"; };
+		997F28DA1C99AB7D007FEB3A /* NSObject+MJClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJClass.m"; sourceTree = "<group>"; };
+		997F28DB1C99AB7D007FEB3A /* NSObject+MJCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJCoding.h"; sourceTree = "<group>"; };
+		997F28DC1C99AB7D007FEB3A /* NSObject+MJCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJCoding.m"; sourceTree = "<group>"; };
+		997F28DD1C99AB7D007FEB3A /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
+		997F28DE1C99AB7D007FEB3A /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
+		997F28DF1C99AB7D007FEB3A /* NSObject+MJProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJProperty.h"; sourceTree = "<group>"; };
+		997F28E01C99AB7D007FEB3A /* NSObject+MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJProperty.m"; sourceTree = "<group>"; };
+		997F28E11C99AB7D007FEB3A /* NSString+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MJExtension.h"; sourceTree = "<group>"; };
+		997F28E21C99AB7D007FEB3A /* NSString+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MJExtension.m"; sourceTree = "<group>"; };
 		998B6BF71C780B9200E58897 /* WBSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBSearchBar.swift; sourceTree = "<group>"; };
 		998B6BF91C780E5B00E58897 /* WBDropdownMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBDropdownMenu.swift; sourceTree = "<group>"; };
 		998B6BFB1C78122E00E58897 /* HomeTitleMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTitleMenuViewController.swift; sourceTree = "<group>"; };
@@ -741,6 +795,32 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		99578C201C99A09300D9F57F /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				99578C211C99A09300D9F57F /* FMDatabase.h */,
+				99578C221C99A09300D9F57F /* FMDatabase.m */,
+				99578C231C99A09300D9F57F /* FMDatabaseAdditions.h */,
+				99578C241C99A09300D9F57F /* FMDatabaseAdditions.m */,
+				99578C251C99A09300D9F57F /* FMDatabasePool.h */,
+				99578C261C99A09300D9F57F /* FMDatabasePool.m */,
+				99578C271C99A09300D9F57F /* FMDatabaseQueue.h */,
+				99578C281C99A09300D9F57F /* FMDatabaseQueue.m */,
+				99578C291C99A09300D9F57F /* FMDB.h */,
+				99578C2A1C99A09300D9F57F /* FMResultSet.h */,
+				99578C2B1C99A09300D9F57F /* FMResultSet.m */,
+			);
+			path = fmdb;
+			sourceTree = "<group>";
+		};
+		99578C311C99A19B00D9F57F /* ModelManager */ = {
+			isa = PBXGroup;
+			children = (
+				99578C321C99A1C000D9F57F /* WBStatusManager.swift */,
+			);
+			path = ModelManager;
+			sourceTree = "<group>";
+		};
 		997EC8FB1C7963BC00923DC2 /* Newfeature(新特性) */ = {
 			isa = PBXGroup;
 			children = (
@@ -764,6 +844,36 @@
 				997ECF701C95504800FFBAD7 /* WBTextAttachment.swift */,
 			);
 			path = Emoticon;
+			sourceTree = "<group>";
+		};
+		997F28CB1C99AB7D007FEB3A /* MJExtension */ = {
+			isa = PBXGroup;
+			children = (
+				997F28CC1C99AB7D007FEB3A /* MJDictionaryCache.h */,
+				997F28CD1C99AB7D007FEB3A /* MJDictionaryCache.m */,
+				997F28CE1C99AB7D007FEB3A /* MJExtension.h */,
+				997F28CF1C99AB7D007FEB3A /* MJExtensionConst.h */,
+				997F28D01C99AB7D007FEB3A /* MJExtensionConst.m */,
+				997F28D11C99AB7D007FEB3A /* MJFoundation.h */,
+				997F28D21C99AB7D007FEB3A /* MJFoundation.m */,
+				997F28D31C99AB7D007FEB3A /* MJProperty.h */,
+				997F28D41C99AB7D007FEB3A /* MJProperty.m */,
+				997F28D51C99AB7D007FEB3A /* MJPropertyKey.h */,
+				997F28D61C99AB7D007FEB3A /* MJPropertyKey.m */,
+				997F28D71C99AB7D007FEB3A /* MJPropertyType.h */,
+				997F28D81C99AB7D007FEB3A /* MJPropertyType.m */,
+				997F28D91C99AB7D007FEB3A /* NSObject+MJClass.h */,
+				997F28DA1C99AB7D007FEB3A /* NSObject+MJClass.m */,
+				997F28DB1C99AB7D007FEB3A /* NSObject+MJCoding.h */,
+				997F28DC1C99AB7D007FEB3A /* NSObject+MJCoding.m */,
+				997F28DD1C99AB7D007FEB3A /* NSObject+MJKeyValue.h */,
+				997F28DE1C99AB7D007FEB3A /* NSObject+MJKeyValue.m */,
+				997F28DF1C99AB7D007FEB3A /* NSObject+MJProperty.h */,
+				997F28E01C99AB7D007FEB3A /* NSObject+MJProperty.m */,
+				997F28E11C99AB7D007FEB3A /* NSString+MJExtension.h */,
+				997F28E21C99AB7D007FEB3A /* NSString+MJExtension.m */,
+			);
+			path = MJExtension;
 			sourceTree = "<group>";
 		};
 		998E7D001C7746B800C805A5 = {
@@ -859,6 +969,7 @@
 		998E7D251C7748F000C805A5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				99578C311C99A19B00D9F57F /* ModelManager */,
 				991EFB6B1C7F3249003FA593 /* WBUser.swift */,
 				991EFB6D1C7F3262003FA593 /* WBStatus.swift */,
 				99CDEFB91C969594000E5E07 /* WBStatusLayout.swift */,
@@ -920,6 +1031,9 @@
 		998E7D2A1C7748F000C805A5 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				996A13191C9A8D9000EA97D2 /* SwiftyJSON.swift */,
+				997F28CB1C99AB7D007FEB3A /* MJExtension */,
+				99578C201C99A09300D9F57F /* fmdb */,
 				991EB7811C9845DD00F9AA51 /* SYAlertView */,
 				99CDEFCB1C96F5F8000E5E07 /* PhotoBrowser */,
 				99DDF0D61C95719E003D8FEC /* DZNEmptyDataSet */,
@@ -1501,17 +1615,20 @@
 				99B505761C941DE600D13FCC /* UIScrollView+YYAdd.m in Sources */,
 				99192B451C942FDB00F4FBA5 /* FFLabel.swift in Sources */,
 				99B5057A1C941DE600D13FCC /* YYCache.m in Sources */,
+				997F28E41C99AB7D007FEB3A /* MJExtensionConst.m in Sources */,
 				99C04EA11C84321C00F42E80 /* WBStatusPictureView.swift in Sources */,
 				998B6BFC1C78122E00E58897 /* HomeTitleMenuViewController.swift in Sources */,
 				991EFBD21C7F445A003FA593 /* MJRefreshHeader.m in Sources */,
 				99B505981C941DE600D13FCC /* UIPasteboard+YYText.m in Sources */,
 				996B97681C7DD8D200C843BC /* WBUserAccount.swift in Sources */,
+				99578C2C1C99A09300D9F57F /* FMDatabase.m in Sources */,
 				991EFBD61C7F445A003FA593 /* MJRefreshBackGifFooter.m in Sources */,
 				99CDEFD71C96F5F8000E5E07 /* SYPhotoBrowserViewController.swift in Sources */,
 				991EFBA01C7F3525003FA593 /* UIView+WebCacheOperation.m in Sources */,
 				991EFBD01C7F445A003FA593 /* MJRefreshComponent.m in Sources */,
 				99B5056B1C941DE600D13FCC /* YYCGUtilities.m in Sources */,
 				99B505881C941DE600D13FCC /* YYSpriteSheetImage.m in Sources */,
+				997F28E51C99AB7D007FEB3A /* MJFoundation.m in Sources */,
 				991EFBD31C7F445A003FA593 /* MJRefreshAutoGifFooter.m in Sources */,
 				99B505671C941DE600D13FCC /* NSString+YYAdd.m in Sources */,
 				99B5058A1C941DE600D13FCC /* YYWebImageOperation.m in Sources */,
@@ -1520,6 +1637,7 @@
 				991EB7871C9845DD00F9AA51 /* SYAlertViewControllerPresentedAnimation.swift in Sources */,
 				99AEDF971C7DED1D00031F2C /* WBNetworkError.swift in Sources */,
 				99B505971C941DE600D13FCC /* NSParagraphStyle+YYText.m in Sources */,
+				99578C301C99A09300D9F57F /* FMResultSet.m in Sources */,
 				99CDEFD31C96F5F8000E5E07 /* SYPhotoBrowserDismissAnimation.swift in Sources */,
 				99C04EB81C84332900F42E80 /* Debugging.swift in Sources */,
 				998B6BFA1C780E5B00E58897 /* WBDropdownMenu.swift in Sources */,
@@ -1544,12 +1662,14 @@
 				991EB7861C9845DD00F9AA51 /* SYAlertViewControllerDismissAnimation.swift in Sources */,
 				998E7D0D1C7746B800C805A5 /* AppDelegate.swift in Sources */,
 				99B505861C941DE600D13FCC /* YYImageCache.m in Sources */,
+				997F28E91C99AB7D007FEB3A /* NSObject+MJClass.m in Sources */,
 				991EFBDA1C7F445A003FA593 /* MJRefreshNormalHeader.m in Sources */,
 				991EFB941C7F3525003FA593 /* SDWebImageCompat.m in Sources */,
 				99B505631C941DE600D13FCC /* NSNumber+YYAdd.m in Sources */,
 				9934D0B21C94593B003AF75F /* GCDSemaphore.swift in Sources */,
 				99B505821C941DE600D13FCC /* UIImageView+YYWebImage.m in Sources */,
 				99B505941C941DE600D13FCC /* YYTextMagnifier.m in Sources */,
+				997F28EC1C99AB7D007FEB3A /* NSObject+MJProperty.m in Sources */,
 				99B505771C941DE600D13FCC /* UITableView+YYAdd.m in Sources */,
 				99B505A01C941DE600D13FCC /* YYTextView.m in Sources */,
 				99B505A61C941DE600D13FCC /* YYReachability.m in Sources */,
@@ -1558,6 +1678,7 @@
 				99C04EB91C84332900F42E80 /* EdgeInsets.swift in Sources */,
 				99B505A81C941DE600D13FCC /* YYThreadSafeArray.m in Sources */,
 				99C04EBA1C84332900F42E80 /* LayoutConstraint.swift in Sources */,
+				99578C2D1C99A09300D9F57F /* FMDatabaseAdditions.m in Sources */,
 				99B5059B1C941DE600D13FCC /* YYTextParser.m in Sources */,
 				998E7D381C774E0F00C805A5 /* DiscoverViewController.swift in Sources */,
 				99B505A91C941DE600D13FCC /* YYThreadSafeDictionary.m in Sources */,
@@ -1584,16 +1705,20 @@
 				9990F5A61C798C57002D8400 /* WBNetworkTool.swift in Sources */,
 				99B505B51C9422CB00D13FCC /* WBStatusHelper.swift in Sources */,
 				991EFB961C7F3525003FA593 /* SDWebImageDownloader.m in Sources */,
+				99578C2F1C99A09300D9F57F /* FMDatabaseQueue.m in Sources */,
 				99B504AA1C93D4BE00D13FCC /* StringExtension.swift in Sources */,
+				996A131A1C9A8D9000EA97D2 /* SwiftyJSON.swift in Sources */,
 				997ECF711C95504800FFBAD7 /* WBTextAttachment.swift in Sources */,
 				99C04EBD1C84332900F42E80 /* ViewController+SnapKit.swift in Sources */,
 				991EFBDF1C7F445A003FA593 /* UIScrollView+MJRefresh.m in Sources */,
+				997F28E81C99AB7D007FEB3A /* MJPropertyType.m in Sources */,
 				991EFBD41C7F445A003FA593 /* MJRefreshAutoNormalFooter.m in Sources */,
 				99B505A11C941DE600D13FCC /* YYAsyncLayer.m in Sources */,
 				99B5058F1C941DE600D13FCC /* YYTextEffectWindow.m in Sources */,
 				991EFB921C7F3525003FA593 /* NSData+ImageContentType.m in Sources */,
 				99B5056D1C941DE600D13FCC /* UIBarButtonItem+YYAdd.m in Sources */,
 				998E7D3E1C774E3400C805A5 /* ProfileViewController.swift in Sources */,
+				99578C2E1C99A09300D9F57F /* FMDatabasePool.m in Sources */,
 				991EFBDB1C7F445A003FA593 /* MJRefreshStateHeader.m in Sources */,
 				99B505A41C941DE600D13FCC /* YYGestureRecognizer.m in Sources */,
 				99C04E9F1C84321C00F42E80 /* WBStatusNormalCell.swift in Sources */,
@@ -1613,8 +1738,11 @@
 				991EFBCE1C7F445A003FA593 /* MJRefreshAutoFooter.m in Sources */,
 				99B5059A1C941DE600D13FCC /* YYTextAttribute.m in Sources */,
 				99B5056A1C941DE600D13FCC /* CALayer+YYAdd.m in Sources */,
+				99578C331C99A1C000D9F57F /* WBStatusManager.swift in Sources */,
 				99B5055C1C941DE600D13FCC /* NSArray+YYAdd.m in Sources */,
 				99B5057F1C941DE600D13FCC /* CALayer+YYWebImage.m in Sources */,
+				997F28EA1C99AB7D007FEB3A /* NSObject+MJCoding.m in Sources */,
+				997F28ED1C99AB7D007FEB3A /* NSString+MJExtension.m in Sources */,
 				991EFB9F1C7F3525003FA593 /* UIImageView+WebCache.m in Sources */,
 				991EFB981C7F3525003FA593 /* SDWebImageManager.m in Sources */,
 				9990F5B71C799004002D8400 /* AFSecurityPolicy.m in Sources */,
@@ -1622,12 +1750,14 @@
 				9934D0B31C94593B003AF75F /* GCDTimer.swift in Sources */,
 				99B5056F1C941DE600D13FCC /* UIColor+YYAdd.m in Sources */,
 				99B505931C941DE600D13FCC /* YYTextLine.m in Sources */,
+				997F28E61C99AB7D007FEB3A /* MJProperty.m in Sources */,
 				991EFB6E1C7F3262003FA593 /* WBStatus.swift in Sources */,
 				99CDEEAC1C964E4C000E5E07 /* UIImageExtension.swift in Sources */,
 				99B505681C941DE600D13FCC /* NSThread+YYAdd.m in Sources */,
 				99B5059D1C941DE600D13FCC /* YYTextRunDelegate.m in Sources */,
 				99C04EA21C84321C00F42E80 /* WBStatusPictureViewCell.swift in Sources */,
 				99B505641C941DE600D13FCC /* NSObject+YYAdd.m in Sources */,
+				997F28E31C99AB7D007FEB3A /* MJDictionaryCache.m in Sources */,
 				9934D0B01C94593B003AF75F /* GCDGroup.swift in Sources */,
 				99B505AB1C941DE600D13FCC /* YYTransaction.m in Sources */,
 				99B505831C941DE600D13FCC /* YYAnimatedImageView.m in Sources */,
@@ -1646,6 +1776,7 @@
 				9934D0B11C94593B003AF75F /* GCDQueue.swift in Sources */,
 				99B5058E1C941DE600D13FCC /* YYTextDebugOption.m in Sources */,
 				9990F5B81C799004002D8400 /* AFURLRequestSerialization.m in Sources */,
+				997F28E71C99AB7D007FEB3A /* MJPropertyKey.m in Sources */,
 				99C04EB21C84332900F42E80 /* Constraint.swift in Sources */,
 				9934D0AF1C94593B003AF75F /* GCDBlock.swift in Sources */,
 				9990F5B61C799004002D8400 /* AFNetworkReachabilityManager.m in Sources */,
@@ -1661,6 +1792,7 @@
 				9990F5B91C799004002D8400 /* AFURLResponseSerialization.m in Sources */,
 				99CDEFD51C96F5F8000E5E07 /* SYPhotoBrowserModel.swift in Sources */,
 				99B505A31C941DE600D13FCC /* YYFileHash.m in Sources */,
+				997F28EB1C99AB7D007FEB3A /* NSObject+MJKeyValue.m in Sources */,
 				99E646FB1C77544800812C7E /* WBTabBarViewController.swift in Sources */,
 				9935EDC81C8483D800B8934A /* Common.swift in Sources */,
 				99B505621C941DE600D13FCC /* NSNotificationCenter+YYAdd.m in Sources */,

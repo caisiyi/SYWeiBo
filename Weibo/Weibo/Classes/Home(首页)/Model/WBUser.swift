@@ -37,9 +37,9 @@ class WBUser: NSObject {
     /// -1:没有认证  0:认证用户  1,2,3,4,5:企业认证  220:达人
     var verified_type: Int = -1
     
-    // 计算型属性，返回认证类型图标
-    var verifiedTypeImage: UIImage? {
-        get {
+    //  返回认证类型图标
+    func  verifiedTypeImage() -> UIImage? {
+        
             switch verified_type {
             case 0:
                 return UIImage(named: "avatar_vip")
@@ -50,20 +50,20 @@ class WBUser: NSObject {
             default:
                 return nil
             }
-        }
+       
     }
     
     /// 会员等级 1-6
     var mbrank: Int = 0
     
-    // 计算型属性，返回会员等级图标
-    var mbrankImage: UIImage? {
-        get {
+    // 返回会员等级图标
+    func mbrankImage() -> UIImage? {
+    
             if mbrank > 0 && mbrank <= 6 {
                 return UIImage(named: "common_icon_membership_level\(mbrank)")
             }
             return nil
-        }
+        
     }
     
 

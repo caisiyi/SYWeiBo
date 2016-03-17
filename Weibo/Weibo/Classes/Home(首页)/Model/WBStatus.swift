@@ -9,7 +9,7 @@
 import UIKit
 
 class WBStatus: NSObject {
-    
+
     // MARK: - 属性
     // 转发微博
     var retweeted_status: WBStatus?{
@@ -108,7 +108,7 @@ class WBStatus: NSObject {
         
     }
     /// 缓存cell行高
-    var rowHeight: CGFloat?
+    var rowHeight: CGFloat = 0
     
     // 重写构造方法，为属性赋值
     init(dict: [String : AnyObject]) {

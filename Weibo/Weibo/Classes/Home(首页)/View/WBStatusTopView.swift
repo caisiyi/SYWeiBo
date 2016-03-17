@@ -36,7 +36,7 @@ class WBStatusTopView: UIView {
             }
             
             // 认证
-            verifiedView.image = status?.user?.verifiedTypeImage
+            verifiedView.image = status?.user?.verifiedTypeImage()
             
             // 用户名称
             nameLabel.text = status?.user?.name
@@ -44,7 +44,7 @@ class WBStatusTopView: UIView {
             nameLabel.textColor = status?.user?.mbrankImage == nil ? UIColor.darkGrayColor() : UIColor.orangeColor()
             
             // 会员等级
-            memberView.image = status?.user?.mbrankImage
+            memberView.image = status?.user?.mbrankImage()
             
             // 时间标签
             

@@ -30,12 +30,8 @@ class HomeViewController: UIViewController,WBDropdownMenuDelegate {
     var preStatusCount:Int? = nil //上拉加载更多时微博数据的当前数量
     var status:[WBStatus]? {
         didSet{
-
-        
             dispatch_async(dispatch_get_main_queue()) { () -> Void in
-
-           
-                
+               
                     self.tableView.reloadData()
                     self.tableView.mj_header.endRefreshing()
                     //若为加载更多微博,则让表格滚动到加载的最新一行
@@ -43,8 +39,7 @@ class HomeViewController: UIViewController,WBDropdownMenuDelegate {
                         self.tableView.mj_footer.endRefreshing()
                         self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: self.preStatusCount ?? 0 , inSection: 0 ), atScrollPosition: UITableViewScrollPosition.Bottom, animated: true)//让table滚置新增cell
                     }
-                    
-                
+         
             }
         
         }
@@ -162,41 +157,40 @@ class HomeViewController: UIViewController,WBDropdownMenuDelegate {
             since_id = self.status?.first?.id
         }
    
-        WBStatus.loadStatus(since_id: since_id,max_id: max_id, finished: { (list, error) -> () in
-        
-            if list != nil {
+        WBStatusManager.shareManager.loadStatus(since_id: since_id, max_id: max_id) { (result) -> () in
+            if result != nil {
                 
                 if max_id != nil {//获取更多微博数据(上拉加载)
                     self.preStatusCount = self.status?.count
-                    if list?.count != 0 {
-                        self.status!.insertContentsOf(list!, at: self.status!.count)
+                    if result?.count != 0 {
+                        self.status!.insertContentsOf(result!, at: self.status!.count)
                     }else{
                         self.tableView.mj_footer.endRefreshingWithNoMoreData()//显示没有更多微博,设置了则无法继续上拉加载功能
-                       
+                        
                         //设置2.0秒后可以重新在请求加载
                         dispatch_after(dispatch_time(DISPATCH_TIME_NOW,Int64(2.0 * Double(NSEC_PER_SEC)) ), dispatch_get_main_queue(), { () -> Void in
-                                //需要重新设置状态为闲置状态，才可以再次上拉
+                            //需要重新设置状态为闲置状态，才可以再次上拉
                             self.tableView.mj_footer.state = MJRefreshState.Idle
                         })
                     }
                     
                 }else{//获取微博数据(下拉刷新)
                     
-                let count = list?.count ?? 0
-                (self.navigationController as! WBNavigationController).showNewStatusCount(count)
+                    let count = result?.count ?? 0
+                    (self.navigationController as! WBNavigationController).showNewStatusCount(count)
                     
-                if  list?.count != 0 {
-                    if self.status != nil {//获取更多微博数据（下拉刷新）
-                        self.status!.insertContentsOf(list!, at: 0)
-                        //此时应当清空tabBar上的未读数量
-                        self.tabBarItem.badgeValue = nil
-                        UIApplication.sharedApplication().applicationIconBadgeNumber = 0
-                    }else{//第一次获取微博数据
-                        self.status = list
+                    if  result?.count != 0 {
+                        if self.status != nil {//获取更多微博数据（下拉刷新）
+                            self.status!.insertContentsOf(result!, at: 0)
+                            //此时应当清空tabBar上的未读数量
+                            self.tabBarItem.badgeValue = nil
+                            UIApplication.sharedApplication().applicationIconBadgeNumber = 0
+                        }else{//第一次获取微博数据
+                            self.status = result
+                        }
+                    }else{
+                        self.tableView.mj_header.endRefreshing()
                     }
-                }else{
-                    self.tableView.mj_header.endRefreshing()
-                }
                     
                 }
                 
@@ -204,7 +198,9 @@ class HomeViewController: UIViewController,WBDropdownMenuDelegate {
                 self.tableView.mj_footer.endRefreshing()
                 self.tableView.mj_header.endRefreshing()
             }
-        })
+        }
+        
+
         
     }
     
@@ -281,8 +277,7 @@ extension HomeViewController :UITableViewDataSource,UITableViewDelegate{
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         // 获取当前cell的微博模型
         let status = self.status![indexPath.row]
-     
-        return status.rowHeight!
+        return status.rowHeight
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.status?.count ?? 0
