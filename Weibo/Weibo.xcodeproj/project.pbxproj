@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		99192B451C942FDB00F4FBA5 /* FFLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99192B441C942FDB00F4FBA5 /* FFLabel.swift */; };
+		99017C011C9C52D9000B7BFF /* HYLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99017C001C9C52D9000B7BFF /* HYLabel.swift */; };
+		99017C031C9C5331000B7BFF /* SYWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99017C021C9C5331000B7BFF /* SYWelcomeViewController.swift */; };
 		991EB7851C9845DD00F9AA51 /* SYAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991EB7821C9845DD00F9AA51 /* SYAlertViewController.swift */; };
 		991EB7861C9845DD00F9AA51 /* SYAlertViewControllerDismissAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991EB7831C9845DD00F9AA51 /* SYAlertViewControllerDismissAnimation.swift */; };
 		991EB7871C9845DD00F9AA51 /* SYAlertViewControllerPresentedAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991EB7841C9845DD00F9AA51 /* SYAlertViewControllerPresentedAnimation.swift */; };
@@ -226,7 +227,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		99192B441C942FDB00F4FBA5 /* FFLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFLabel.swift; sourceTree = "<group>"; };
+		99017C001C9C52D9000B7BFF /* HYLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYLabel.swift; sourceTree = "<group>"; };
+		99017C021C9C5331000B7BFF /* SYWelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYWelcomeViewController.swift; sourceTree = "<group>"; };
 		991EB7821C9845DD00F9AA51 /* SYAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYAlertViewController.swift; sourceTree = "<group>"; };
 		991EB7831C9845DD00F9AA51 /* SYAlertViewControllerDismissAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYAlertViewControllerDismissAnimation.swift; sourceTree = "<group>"; };
 		991EB7841C9845DD00F9AA51 /* SYAlertViewControllerPresentedAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYAlertViewControllerPresentedAnimation.swift; sourceTree = "<group>"; };
@@ -607,14 +609,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		99192B431C942FDB00F4FBA5 /* FFLabel */ = {
-			isa = PBXGroup;
-			children = (
-				99192B441C942FDB00F4FBA5 /* FFLabel.swift */,
-			);
-			path = FFLabel;
-			sourceTree = "<group>";
-		};
 		991EB7811C9845DD00F9AA51 /* SYAlertView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1005,7 +999,7 @@
 		998E7D281C7748F000C805A5 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				99192B431C942FDB00F4FBA5 /* FFLabel */,
+				99017C001C9C52D9000B7BFF /* HYLabel.swift */,
 				99B504A71C93D26F00D13FCC /* NSDateExtensions.swift */,
 				99B504A91C93D4BE00D13FCC /* StringExtension.swift */,
 				99E646F81C77503300812C7E /* WBColor.swift */,
@@ -1021,6 +1015,7 @@
 		998E7D291C7748F000C805A5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				99017C021C9C5331000B7BFF /* SYWelcomeViewController.swift */,
 				99E646FA1C77544800812C7E /* WBTabBarViewController.swift */,
 				99E646FC1C77558700812C7E /* WBNavigationController.swift */,
 				9990F5BB1C799276002D8400 /* WBOAuthViewController.swift */,
@@ -1606,6 +1601,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				99B505891C941DE600D13FCC /* YYWebImageManager.m in Sources */,
+				99017C031C9C5331000B7BFF /* SYWelcomeViewController.swift in Sources */,
 				99B505961C941DE600D13FCC /* NSAttributedString+YYText.m in Sources */,
 				991EFB9B1C7F3525003FA593 /* UIImage+GIF.m in Sources */,
 				99B5057C1C941DE600D13FCC /* YYKVStorage.m in Sources */,
@@ -1613,7 +1609,6 @@
 				99E646F91C77503300812C7E /* WBColor.swift in Sources */,
 				99B504A81C93D26F00D13FCC /* NSDateExtensions.swift in Sources */,
 				99B505761C941DE600D13FCC /* UIScrollView+YYAdd.m in Sources */,
-				99192B451C942FDB00F4FBA5 /* FFLabel.swift in Sources */,
 				99B5057A1C941DE600D13FCC /* YYCache.m in Sources */,
 				997F28E41C99AB7D007FEB3A /* MJExtensionConst.m in Sources */,
 				99C04EA11C84321C00F42E80 /* WBStatusPictureView.swift in Sources */,
@@ -1640,6 +1635,7 @@
 				99578C301C99A09300D9F57F /* FMResultSet.m in Sources */,
 				99CDEFD31C96F5F8000E5E07 /* SYPhotoBrowserDismissAnimation.swift in Sources */,
 				99C04EB81C84332900F42E80 /* Debugging.swift in Sources */,
+				99017C011C9C52D9000B7BFF /* HYLabel.swift in Sources */,
 				998B6BFA1C780E5B00E58897 /* WBDropdownMenu.swift in Sources */,
 				99B5059C1C941DE600D13FCC /* YYTextRubyAnnotation.m in Sources */,
 				99B505741C941DE600D13FCC /* UIImage+YYAdd.m in Sources */,

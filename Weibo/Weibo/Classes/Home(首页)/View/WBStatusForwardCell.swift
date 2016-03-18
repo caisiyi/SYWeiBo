@@ -103,10 +103,10 @@ class WBStatusForwardCell: WBStatusCell {
     
     // MARK: - 懒加载
     /// 转发微博文字
-    private lazy var forwardLabel: FFLabel = {
-        let label = FFLabel(textColor: UIColor.grayColor(), fontSize: 14)
+    private lazy var forwardLabel: HYLabel = {
+        let label = HYLabel()
         
-      
+       label.font = UIFont.systemFontOfSize(14)
         
         // 设置换行属性
         label.numberOfLines = 0

@@ -230,7 +230,7 @@ extension WBNetworkTool {
             self.afnManager.GET(URLString, parameters: parameters, progress: { (progress) -> Void in
                     // 进度
                 }, success: { (_, result) -> Void in
-               
+                 
                     // 成功回调
                     finished(result: result as? [String : AnyObject], error: nil)
                 }, failure: { (_, error) -> Void in

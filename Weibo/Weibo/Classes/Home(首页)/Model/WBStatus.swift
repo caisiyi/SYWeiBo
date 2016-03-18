@@ -44,10 +44,10 @@ class WBStatus: NSObject {
     /// 微博信息内容
     var text: String?{
         didSet{
-            attributedText = WBEmoticon.stringToEmoticonString(text!, font: UIFont.systemFontOfSize(15))
+            self.attributedText = WBEmoticon.stringToEmoticonString(self.text!, font: UIFont.systemFontOfSize(15))
         }
     }
-    
+
     //  微博文字转带有表情的
     var attributedText:NSAttributedString?
     
@@ -146,6 +146,8 @@ class WBStatus: NSObject {
     
     // 在kvc字典转模型时，user属性特殊处理
     override func setValue(value: AnyObject?, forKey key: String) {
+
+   
         
         // 如果是user属性
         if key == "user" {
@@ -163,9 +165,11 @@ class WBStatus: NSObject {
             }
             return
         }
-
+        
+        
         // 调用父类方法
         super.setValue(value, forKey: key)
+    
     }
     
    

@@ -20,7 +20,7 @@ public class WBStatusManager {
             //获取Document目录
             let document = paths.objectAtIndex(0)
             //拼接上数据库文件名
-            let path = document.stringByAppendingPathComponent("WeiboStatus2.sqlite")
+            let path = document.stringByAppendingPathComponent("WeiboStatus.sqlite")
             return path
         }
         
@@ -178,7 +178,7 @@ public class WBStatusManager {
                 //编辑Weather对象模型数组weather,拿到每一个要保持的weather
                 try status.forEach({ (statu) -> () in
                     WBStatus.mj_setupIgnoredPropertyNames({ () -> [AnyObject]! in
-                        return ["created_time","attributedText","forwardAttributedText","largePictureURLs","pictureURLs","source"]
+                        return ["created_time","attributedText","forwardAttributedText","largePictureURLs","pictureURLs"]
                     })
                     let jsonData = statu.mj_keyValues().mj_JSONData()
                     //执行插入语句,将对应的模型字段变成数组values传入

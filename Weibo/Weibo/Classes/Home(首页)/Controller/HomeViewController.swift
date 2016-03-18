@@ -251,9 +251,9 @@ class HomeViewController: UIViewController,WBDropdownMenuDelegate {
     }
     override func viewDidAppear(animated: Bool) {
         //添加未登录时候自动跳到授权登录
-        if !WBUserAccount.shareUserAccount.isAuth {
-            login()
-        }
+//        if !WBUserAccount.shareUserAccount.isAuth {
+//            login()
+//        }
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -91,7 +91,6 @@ class WBUserAccount: NSObject, NSCoding {
                 finish(result: nil, error: error)
                 return
             }
-            
             // 给用户信息对象属性赋值
             self.name = result!["name"] as? String
             self.avatar_large = result!["avatar_large"] as? String

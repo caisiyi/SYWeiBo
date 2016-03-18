@@ -9,10 +9,10 @@
 import UIKit
 
 class WBStatusHelper {
-    //缓存http链接的类型
-    class func saveHttpLinkStyle(url:String){
+    //拿到http链接的类型
+    class func getHttpLinkStyle(url:String,finished:(result:NSDictionary?)->()){
        WBNetworkTool.shareNetworkTool.expandUrl(url) { (result, error) -> () in
-        print(result)
+            finished(result: result)
         }
     }
 
