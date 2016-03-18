@@ -11,7 +11,7 @@ import UIKit
 extension UIWindow {
     
     func switchRootViewController(){
-          self.rootViewController = isNewVersion() ? NewfeatureViewController() : WBTabBarViewController()
+        self.rootViewController = isNewVersion() ? NewfeatureViewController() : WBUserAccount.shareUserAccount.isAuth ? SYWelcomeViewController() : WBTabBarViewController()
     }
     
     /**
