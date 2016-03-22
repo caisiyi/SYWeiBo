@@ -102,6 +102,10 @@
 		9990F5B91C799004002D8400 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 9990F5B21C799004002D8400 /* AFURLResponseSerialization.m */; };
 		9990F5BA1C799004002D8400 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9990F5B41C799004002D8400 /* AFURLSessionManager.m */; };
 		9990F5BC1C799276002D8400 /* WBOAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9990F5BB1C799276002D8400 /* WBOAuthViewController.swift */; };
+		99AD94BF1CA174130022F751 /* SYCheckLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AD94BB1CA174130022F751 /* SYCheckLayer.swift */; };
+		99AD94C01CA174130022F751 /* SYForkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AD94BC1CA174130022F751 /* SYForkLayer.swift */; };
+		99AD94C11CA174130022F751 /* SYProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AD94BD1CA174130022F751 /* SYProgressHUD.swift */; };
+		99AD94C21CA174130022F751 /* SYRingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AD94BE1CA174130022F751 /* SYRingLayer.swift */; };
 		99AEDF951C7DE84300031F2C /* UIWindow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AEDF941C7DE84300031F2C /* UIWindow+Extension.swift */; };
 		99AEDF971C7DED1D00031F2C /* WBNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AEDF961C7DED1D00031F2C /* WBNetworkError.swift */; };
 		99B504A81C93D26F00D13FCC /* NSDateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B504A71C93D26F00D13FCC /* NSDateExtensions.swift */; };
@@ -386,6 +390,10 @@
 		9990F5B31C799004002D8400 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		9990F5B41C799004002D8400 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		9990F5BB1C799276002D8400 /* WBOAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBOAuthViewController.swift; sourceTree = "<group>"; };
+		99AD94BB1CA174130022F751 /* SYCheckLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYCheckLayer.swift; sourceTree = "<group>"; };
+		99AD94BC1CA174130022F751 /* SYForkLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYForkLayer.swift; sourceTree = "<group>"; };
+		99AD94BD1CA174130022F751 /* SYProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYProgressHUD.swift; sourceTree = "<group>"; };
+		99AD94BE1CA174130022F751 /* SYRingLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYRingLayer.swift; sourceTree = "<group>"; };
 		99AEDF941C7DE84300031F2C /* UIWindow+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extension.swift"; sourceTree = "<group>"; };
 		99AEDF961C7DED1D00031F2C /* WBNetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNetworkError.swift; sourceTree = "<group>"; };
 		99B504A71C93D26F00D13FCC /* NSDateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtensions.swift; sourceTree = "<group>"; };
@@ -1027,6 +1035,7 @@
 			isa = PBXGroup;
 			children = (
 				996A13191C9A8D9000EA97D2 /* SwiftyJSON.swift */,
+				99AD94BA1CA174130022F751 /* SYProgressHUD */,
 				997F28CB1C99AB7D007FEB3A /* MJExtension */,
 				99578C201C99A09300D9F57F /* fmdb */,
 				991EB7811C9845DD00F9AA51 /* SYAlertView */,
@@ -1174,6 +1183,17 @@
 				9990F5B41C799004002D8400 /* AFURLSessionManager.m */,
 			);
 			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		99AD94BA1CA174130022F751 /* SYProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				99AD94BB1CA174130022F751 /* SYCheckLayer.swift */,
+				99AD94BC1CA174130022F751 /* SYForkLayer.swift */,
+				99AD94BD1CA174130022F751 /* SYProgressHUD.swift */,
+				99AD94BE1CA174130022F751 /* SYRingLayer.swift */,
+			);
+			path = SYProgressHUD;
 			sourceTree = "<group>";
 		};
 		99B504AB1C941DE600D13FCC /* YYKit */ = {
@@ -1719,6 +1739,7 @@
 				99B505A41C941DE600D13FCC /* YYGestureRecognizer.m in Sources */,
 				99C04E9F1C84321C00F42E80 /* WBStatusNormalCell.swift in Sources */,
 				99C04EB61C84332900F42E80 /* ConstraintMaker.swift in Sources */,
+				99AD94BF1CA174130022F751 /* SYCheckLayer.swift in Sources */,
 				9990F5B51C799004002D8400 /* AFHTTPSessionManager.m in Sources */,
 				99B505721C941DE600D13FCC /* UIFont+YYAdd.m in Sources */,
 				99CDEFD61C96F5F8000E5E07 /* SYPhotoBrowserViewCell.swift in Sources */,
@@ -1782,6 +1803,7 @@
 				99B505691C941DE600D13FCC /* NSTimer+YYAdd.m in Sources */,
 				991EFB9D1C7F3525003FA593 /* UIImage+WebP.m in Sources */,
 				99B505841C941DE600D13FCC /* YYFrameImage.m in Sources */,
+				99AD94C01CA174130022F751 /* SYForkLayer.swift in Sources */,
 				99B505AA1C941DE600D13FCC /* YYTimer.m in Sources */,
 				991EFB9A1C7F3525003FA593 /* UIButton+WebCache.m in Sources */,
 				99B505AC1C941DE600D13FCC /* YYWeakProxy.m in Sources */,
@@ -1793,7 +1815,9 @@
 				9935EDC81C8483D800B8934A /* Common.swift in Sources */,
 				99B505621C941DE600D13FCC /* NSNotificationCenter+YYAdd.m in Sources */,
 				99578C1F1C993F8000D9F57F /* WBCenterItemButton.swift in Sources */,
+				99AD94C21CA174130022F751 /* SYRingLayer.swift in Sources */,
 				99C04EB51C84332900F42E80 /* ConstraintItem.swift in Sources */,
+				99AD94C11CA174130022F751 /* SYProgressHUD.swift in Sources */,
 				99E646FF1C7759AD00812C7E /* UIBarButtonItem+Extension.swift in Sources */,
 				991EFBD91C7F445A003FA593 /* MJRefreshGifHeader.m in Sources */,
 				998E7D3A1C774E1C00C805A5 /* HomeViewController.swift in Sources */,
