@@ -111,7 +111,6 @@ class WBStatusPictureView: UICollectionView {
             if let image = SDWebImageManager.sharedManager().imageCache.imageFromDiskCacheForKey(urlString) {
                 size = CGSize(width: image.size.width * 3, height: image.size.height * 3)
             }
-            
             // 设置最小宽度
             if size.width < 40 {
                 size.width = 40
@@ -128,10 +127,9 @@ class WBStatusPictureView: UICollectionView {
         
         // 四张图片
         if count == 4 {
-            let width = 2 * itemWidth + margin
+            let width = 2 * itemWidth + margin + 1
             return CGSize(width: width, height: width)
         }
-        
         // 其他图片 ： 2, 3, 5, 6, 7, 8, 9
         // 公式： 行数 = (图片数量 + 列数 - 1) / 列数
         let row = (count + column - 1) / column
